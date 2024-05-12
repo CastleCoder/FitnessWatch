@@ -6,19 +6,20 @@
 //
 
 import SwiftUI
+import WatchKit
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            NavigationLink(destination: musclesView()){
+                Text("Commencer la séance")
+            }
+                .padding()
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
 }
+

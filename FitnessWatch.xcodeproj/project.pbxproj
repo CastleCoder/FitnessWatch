@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		974F4DDB2BF1693F0033B74B /* dataExercices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDA2BF1693F0033B74B /* dataExercices.swift */; };
+		974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDF2BF16A9A0033B74B /* MusclesView.swift */; };
+		974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */; };
 		97C10D922BC997CC00023E7D /* FitnessWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10D912BC997CC00023E7D /* FitnessWatchApp.swift */; };
 		97C10D942BC997CC00023E7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10D932BC997CC00023E7D /* ContentView.swift */; };
 		97C10D962BC997CD00023E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C10D952BC997CD00023E7D /* Assets.xcassets */; };
@@ -16,6 +19,7 @@
 		97C10DA62BC997CD00023E7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10DA52BC997CD00023E7D /* ContentView.swift */; };
 		97C10DA82BC997CE00023E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C10DA72BC997CE00023E7D /* Assets.xcassets */; };
 		97C10DAB2BC997CE00023E7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C10DAA2BC997CE00023E7D /* Preview Assets.xcassets */; };
+		97C10DB62BC99B7400023E7D /* CrownTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10DB52BC99B7400023E7D /* CrownTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		974F4DDA2BF1693F0033B74B /* dataExercices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataExercices.swift; sourceTree = "<group>"; };
+		974F4DDF2BF16A9A0033B74B /* MusclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesView.swift; sourceTree = "<group>"; };
+		974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleExercicesView.swift; sourceTree = "<group>"; };
 		97C10D8E2BC997CC00023E7D /* FitnessWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C10D912BC997CC00023E7D /* FitnessWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessWatchApp.swift; sourceTree = "<group>"; };
 		97C10D932BC997CC00023E7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +60,7 @@
 		97C10DA52BC997CD00023E7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		97C10DA72BC997CE00023E7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C10DAA2BC997CE00023E7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		97C10DB52BC99B7400023E7D /* CrownTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrownTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		974F4DDC2BF169600033B74B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				974F4DDA2BF1693F0033B74B /* dataExercices.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		97C10D852BC997CC00023E7D = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +129,14 @@
 		97C10DA22BC997CD00023E7D /* FitnessWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				974F4DDC2BF169600033B74B /* Data */,
 				97C10DA32BC997CD00023E7D /* FitnessWatchApp.swift */,
 				97C10DA52BC997CD00023E7D /* ContentView.swift */,
 				97C10DA72BC997CE00023E7D /* Assets.xcassets */,
 				97C10DA92BC997CE00023E7D /* Preview Content */,
+				97C10DB52BC99B7400023E7D /* CrownTest.swift */,
+				974F4DDF2BF16A9A0033B74B /* MusclesView.swift */,
+				974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */,
 			);
 			path = "FitnessWatch Watch App";
 			sourceTree = "<group>";
@@ -242,6 +262,10 @@
 			files = (
 				97C10DA62BC997CD00023E7D /* ContentView.swift in Sources */,
 				97C10DA42BC997CD00023E7D /* FitnessWatchApp.swift in Sources */,
+				97C10DB62BC99B7400023E7D /* CrownTest.swift in Sources */,
+				974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */,
+				974F4DDB2BF1693F0033B74B /* dataExercices.swift in Sources */,
+				974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +468,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = FitnessWatch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -477,6 +502,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = FitnessWatch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
