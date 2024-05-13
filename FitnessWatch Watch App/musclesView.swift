@@ -7,13 +7,18 @@
 
 import SwiftUI
 
+
 struct MusclesView: View {
     
-    let muscleGroups = ExerciceData.muscleGroups
+    let muscleGroup = ExerciceData.muscleGroups
+    //let exerciceMuscles = ExerciceData.
     
     var body: some View {
-        List(muscleGroups, id: \.id) { muscle in
-            Text(muscle.name)
+        NavigationView {
+            List(muscleGroup, id: \.name) { muscle in
+                NavigationLink(destination: MuscleExercicesView(muscle: muscle))
+                Text(muscle.name)
+            }
         }
     }
 }

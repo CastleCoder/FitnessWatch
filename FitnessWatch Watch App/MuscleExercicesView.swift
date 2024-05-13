@@ -7,9 +7,13 @@
 
 import SwiftUI
 
+var muscle: MuscleGroup
+
 struct MuscleExercicesView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(muscle.exercices, id: \.name) { exercice in
+            Text(exercice.name)
+        }
     }
 }
 
