@@ -10,15 +10,20 @@ import SwiftUI
 
 struct MusclesView: View {
     
+    //@Binding var choiceGroup: String
+    
+    
     let muscleGroup = ExerciceData.muscleGroups
-    //let exerciceMuscles = ExerciceData.
     
     var body: some View {
-        NavigationView {
-            List(muscleGroup, id: \.name) { muscle in
-                NavigationLink(destination: MuscleExercicesView(muscle: muscle))
-                Text(muscle.name)
+        NavigationStack {
+            List(muscleGroup, id: \.name) { group in
+                NavigationLink(destination: MuscleExercicesView(groupName: group.name)) {
+                    Text(group.name)
+                }
             }
+            .navigationTitle(Text("Groupes Musculaires"))
+           
         }
     }
 }

@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-var muscle: MuscleGroup
 
 struct MuscleExercicesView: View {
+    
+    let groupName: String
+    
     var body: some View {
-        List(muscle.exercices, id: \.name) { exercice in
-            Text(exercice.name)
-        }
+        Text("Exercices pour \(groupName)")
+        
     }
 }
 
 #Preview {
-    MuscleExercicesView()
+    MuscleExercicesView(groupName: "Pectoraux")
 }
