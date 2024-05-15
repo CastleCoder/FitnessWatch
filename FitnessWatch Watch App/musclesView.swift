@@ -9,9 +9,7 @@ import SwiftUI
 
 
 struct MusclesView: View {
-    
-    //@Binding var choiceGroup: String
-    
+        
     
     let muscleGroup = ExerciceData.muscleGroups
     

@@ -10,10 +10,20 @@ import SwiftUI
 
 struct MuscleExercicesView: View {
     
+    let exerciceGroup = ExerciceData.muscleGroups
+    
     let groupName: String
     
     var body: some View {
-        Text("Exercices pour \(groupName)")
+        if let group = ExerciceData.muscleGroups.first(where: { $0.name == groupName }) {
+                    List(group.exercices, id: \.id) { exercice in
+                        NavigationLink(exercice.name, destination: ChooseWeight())
+                    }
+                    .navigationTitle(Text("Exercices pour \(groupName)"))
+                } else {
+                    Text("Aucun exercice trouvé pour \(groupName)")
+                        .navigationTitle(Text("Erreur"))
+                }
         
     }
 }

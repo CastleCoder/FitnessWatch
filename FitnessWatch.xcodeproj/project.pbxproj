@@ -10,6 +10,9 @@
 		974F4DDB2BF1693F0033B74B /* dataExercices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDA2BF1693F0033B74B /* dataExercices.swift */; };
 		974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDF2BF16A9A0033B74B /* MusclesView.swift */; };
 		974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */; };
+		977D47772BF552AD0033D80D /* ContinuedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977D47762BF552AD0033D80D /* ContinuedView.swift */; };
+		9793D68B2BF4F75B00DB0D03 /* ChooseWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793D68A2BF4F75B00DB0D03 /* ChooseWeight.swift */; };
+		9793D68D2BF4F9A800DB0D03 /* RepetitionsNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793D68C2BF4F9A800DB0D03 /* RepetitionsNumbers.swift */; };
 		97C10D922BC997CC00023E7D /* FitnessWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10D912BC997CC00023E7D /* FitnessWatchApp.swift */; };
 		97C10D942BC997CC00023E7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10D932BC997CC00023E7D /* ContentView.swift */; };
 		97C10D962BC997CD00023E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C10D952BC997CD00023E7D /* Assets.xcassets */; };
@@ -50,6 +53,9 @@
 		974F4DDA2BF1693F0033B74B /* dataExercices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataExercices.swift; sourceTree = "<group>"; };
 		974F4DDF2BF16A9A0033B74B /* MusclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesView.swift; sourceTree = "<group>"; };
 		974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleExercicesView.swift; sourceTree = "<group>"; };
+		977D47762BF552AD0033D80D /* ContinuedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuedView.swift; sourceTree = "<group>"; };
+		9793D68A2BF4F75B00DB0D03 /* ChooseWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWeight.swift; sourceTree = "<group>"; };
+		9793D68C2BF4F9A800DB0D03 /* RepetitionsNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionsNumbers.swift; sourceTree = "<group>"; };
 		97C10D8E2BC997CC00023E7D /* FitnessWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C10D912BC997CC00023E7D /* FitnessWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessWatchApp.swift; sourceTree = "<group>"; };
 		97C10D932BC997CC00023E7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +143,9 @@
 				97C10DB52BC99B7400023E7D /* CrownTest.swift */,
 				974F4DDF2BF16A9A0033B74B /* MusclesView.swift */,
 				974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */,
+				9793D68A2BF4F75B00DB0D03 /* ChooseWeight.swift */,
+				9793D68C2BF4F9A800DB0D03 /* RepetitionsNumbers.swift */,
+				977D47762BF552AD0033D80D /* ContinuedView.swift */,
 			);
 			path = "FitnessWatch Watch App";
 			sourceTree = "<group>";
@@ -265,7 +274,10 @@
 				97C10DB62BC99B7400023E7D /* CrownTest.swift in Sources */,
 				974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */,
 				974F4DDB2BF1693F0033B74B /* dataExercices.swift in Sources */,
+				977D47772BF552AD0033D80D /* ContinuedView.swift in Sources */,
+				9793D68D2BF4F9A800DB0D03 /* RepetitionsNumbers.swift in Sources */,
 				974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */,
+				9793D68B2BF4F75B00DB0D03 /* ChooseWeight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
