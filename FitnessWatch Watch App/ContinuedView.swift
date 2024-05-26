@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContinuedView: View {
     var body: some View {
-        Text("Voulez-vous refaire une série ?")
-            .multilineTextAlignment(.center)
-            .padding()
-        NavigationView{
+        
+        NavigationStack{
+            Text("Voulez-vous refaire une série ?")
+                .multilineTextAlignment(.center)
+                .padding()
             
             HStack(alignment: .center) {
                 NavigationLink(destination: ChooseWeight()) {

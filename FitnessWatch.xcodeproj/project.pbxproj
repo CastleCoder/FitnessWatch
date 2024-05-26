@@ -3,16 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		971CF4862BFB7B7B00BD79A6 /* TimerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4852BFB7B7B00BD79A6 /* TimerOne.swift */; };
+		971CF4892BFB859300BD79A6 /* TimerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4882BFB859300BD79A6 /* TimerTwo.swift */; };
+		971CF48B2BFB859D00BD79A6 /* TimerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF48A2BFB859D00BD79A6 /* TimerThree.swift */; };
+		971CF48D2BFB85A500BD79A6 /* TimerFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF48C2BFB85A500BD79A6 /* TimerFour.swift */; };
+		971CF48F2BFD1CD300BD79A6 /* AllTimersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF48E2BFD1CD300BD79A6 /* AllTimersView.swift */; };
+		971CF4912BFD3F7800BD79A6 /* Chronometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4902BFD3F7800BD79A6 /* Chronometer.swift */; };
+		971CF4932BFD412600BD79A6 /* AllTimers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4922BFD412600BD79A6 /* AllTimers.swift */; };
 		974F4DDB2BF1693F0033B74B /* dataExercices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDA2BF1693F0033B74B /* dataExercices.swift */; };
 		974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDF2BF16A9A0033B74B /* MusclesView.swift */; };
 		974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */; };
 		977D47772BF552AD0033D80D /* ContinuedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977D47762BF552AD0033D80D /* ContinuedView.swift */; };
 		9793D68B2BF4F75B00DB0D03 /* ChooseWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793D68A2BF4F75B00DB0D03 /* ChooseWeight.swift */; };
 		9793D68D2BF4F9A800DB0D03 /* RepetitionsNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793D68C2BF4F9A800DB0D03 /* RepetitionsNumbers.swift */; };
+		97A81EFB2C03DAD30024A46A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A81EFA2C03DAD30024A46A /* MainView.swift */; };
 		97C10D922BC997CC00023E7D /* FitnessWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10D912BC997CC00023E7D /* FitnessWatchApp.swift */; };
 		97C10D942BC997CC00023E7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10D932BC997CC00023E7D /* ContentView.swift */; };
 		97C10D962BC997CD00023E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C10D952BC997CD00023E7D /* Assets.xcassets */; };
@@ -50,12 +58,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		971CF4852BFB7B7B00BD79A6 /* TimerOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerOne.swift; sourceTree = "<group>"; };
+		971CF4882BFB859300BD79A6 /* TimerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTwo.swift; sourceTree = "<group>"; };
+		971CF48A2BFB859D00BD79A6 /* TimerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerThree.swift; sourceTree = "<group>"; };
+		971CF48C2BFB85A500BD79A6 /* TimerFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFour.swift; sourceTree = "<group>"; };
+		971CF48E2BFD1CD300BD79A6 /* AllTimersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTimersView.swift; sourceTree = "<group>"; };
+		971CF4902BFD3F7800BD79A6 /* Chronometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chronometer.swift; sourceTree = "<group>"; };
+		971CF4922BFD412600BD79A6 /* AllTimers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTimers.swift; sourceTree = "<group>"; };
 		974F4DDA2BF1693F0033B74B /* dataExercices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataExercices.swift; sourceTree = "<group>"; };
 		974F4DDF2BF16A9A0033B74B /* MusclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesView.swift; sourceTree = "<group>"; };
 		974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleExercicesView.swift; sourceTree = "<group>"; };
 		977D47762BF552AD0033D80D /* ContinuedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuedView.swift; sourceTree = "<group>"; };
 		9793D68A2BF4F75B00DB0D03 /* ChooseWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWeight.swift; sourceTree = "<group>"; };
 		9793D68C2BF4F9A800DB0D03 /* RepetitionsNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionsNumbers.swift; sourceTree = "<group>"; };
+		97A81EFA2C03DAD30024A46A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		97C10D8E2BC997CC00023E7D /* FitnessWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C10D912BC997CC00023E7D /* FitnessWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessWatchApp.swift; sourceTree = "<group>"; };
 		97C10D932BC997CC00023E7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +103,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		971CF4872BFB854200BD79A6 /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				971CF4852BFB7B7B00BD79A6 /* TimerOne.swift */,
+				971CF4882BFB859300BD79A6 /* TimerTwo.swift */,
+				971CF48A2BFB859D00BD79A6 /* TimerThree.swift */,
+				971CF48C2BFB85A500BD79A6 /* TimerFour.swift */,
+				971CF48E2BFD1CD300BD79A6 /* AllTimersView.swift */,
+				971CF4902BFD3F7800BD79A6 /* Chronometer.swift */,
+			);
+			path = Timers;
+			sourceTree = "<group>";
+		};
 		974F4DDC2BF169600033B74B /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +164,7 @@
 		97C10DA22BC997CD00023E7D /* FitnessWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				971CF4872BFB854200BD79A6 /* Timers */,
 				974F4DDC2BF169600033B74B /* Data */,
 				97C10DA32BC997CD00023E7D /* FitnessWatchApp.swift */,
 				97C10DA52BC997CD00023E7D /* ContentView.swift */,
@@ -146,6 +176,8 @@
 				9793D68A2BF4F75B00DB0D03 /* ChooseWeight.swift */,
 				9793D68C2BF4F9A800DB0D03 /* RepetitionsNumbers.swift */,
 				977D47762BF552AD0033D80D /* ContinuedView.swift */,
+				971CF4922BFD412600BD79A6 /* AllTimers.swift */,
+				97A81EFA2C03DAD30024A46A /* MainView.swift */,
 			);
 			path = "FitnessWatch Watch App";
 			sourceTree = "<group>";
@@ -205,7 +237,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					97C10D8D2BC997CC00023E7D = {
 						CreatedOnToolsVersion = 15.3;
@@ -216,7 +248,7 @@
 				};
 			};
 			buildConfigurationList = 97C10D892BC997CC00023E7D /* Build configuration list for PBXProject "FitnessWatch" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -269,11 +301,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971CF48B2BFB859D00BD79A6 /* TimerThree.swift in Sources */,
+				971CF48D2BFB85A500BD79A6 /* TimerFour.swift in Sources */,
+				971CF4862BFB7B7B00BD79A6 /* TimerOne.swift in Sources */,
 				97C10DA62BC997CD00023E7D /* ContentView.swift in Sources */,
 				97C10DA42BC997CD00023E7D /* FitnessWatchApp.swift in Sources */,
+				971CF4892BFB859300BD79A6 /* TimerTwo.swift in Sources */,
 				97C10DB62BC99B7400023E7D /* CrownTest.swift in Sources */,
+				971CF4932BFD412600BD79A6 /* AllTimers.swift in Sources */,
 				974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */,
+				971CF48F2BFD1CD300BD79A6 /* AllTimersView.swift in Sources */,
 				974F4DDB2BF1693F0033B74B /* dataExercices.swift in Sources */,
+				97A81EFB2C03DAD30024A46A /* MainView.swift in Sources */,
+				971CF4912BFD3F7800BD79A6 /* Chronometer.swift in Sources */,
 				977D47772BF552AD0033D80D /* ContinuedView.swift in Sources */,
 				9793D68D2BF4F9A800DB0D03 /* RepetitionsNumbers.swift in Sources */,
 				974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */,
@@ -326,6 +366,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -387,6 +428,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -432,7 +474,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Debug;
 		};
@@ -463,7 +505,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};

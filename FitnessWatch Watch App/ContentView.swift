@@ -11,8 +11,12 @@ import WatchKit
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            NavigationLink(destination: MusclesView()){
+            NavigationLink(destination: MainView()){
                 Text("Commencer la séance")
+            }
+                .padding()
+            NavigationLink(destination: AllTimers()){
+                Text("Timer")
             }
                 .padding()
         }
