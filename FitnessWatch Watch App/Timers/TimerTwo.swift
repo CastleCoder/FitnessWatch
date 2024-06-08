@@ -8,50 +8,54 @@
 import SwiftUI
 
 struct TimerTwo: View {
-    @State private var timeRemaining: Double = 90.0
-    @State private var initialTime: Double = 90.0
-    @State private var timerActive = false
-    @State private var timer: Timer? = nil
+    @ObservedObject var timerManager = CountdownTimerManager.shared
     
+    let initialTime: Double = 90.0
     
     var body: some View {
         VStack {
-                    Text(timeString(from: timeRemaining))
-                        .font(.largeTitle)
-                        .padding()
-                    
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            if timerActive {
-                                stopTimer()
-                            } else {
-                                startTimer()
-                            }
-                        }) {
-                            Image(systemName: timerActive ? "stop.circle.fill" : "restart.circle")
-                                .resizable()
-                                .frame(width: 40, height: 40)
-                                .padding()
-                                .foregroundColor(timerActive ? .red : .green)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        
-                        if !timerActive {
-                            Spacer()
-                            Button(action: resetTimer) {
-                                Image(systemName: "arrow.counterclockwise.circle.fill")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                                    .padding()
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                        }
-                        Spacer()
-                        
+            Text(timeString(from: timerManager.timeRemaining))
+                .font(.largeTitle)
+                .padding()
+            
+            HStack {
+                Spacer()
+                Button(action: {
+                    if timerManager.timerActive {
+                        timerManager.stopTimer()
+                    } else {
+                        timerManager.startTimer(initialTime: initialTime)
                     }
+                }) {
+                    Image(systemName: timerManager.timerActive ? "stop.circle.fill" : "restart.circle")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                        .padding()
+                        .foregroundColor(timerManager.timerActive ? .red : .green)
                 }
-                .onAppear(perform: resetTimer)
+                .buttonStyle(PlainButtonStyle())
+                
+                if !timerManager.timerActive {
+                    Spacer()
+                    Button(action: {
+                        timerManager.resetTimer(initialTime: initialTime)
+                    }) {
+                        Image(systemName: "arrow.counterclockwise.circle.fill")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .padding()
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+                Spacer()
+                
+            }
+        }
+        .onAppear {
+            if !timerManager.timerActive {
+                timerManager.resetTimer(initialTime: initialTime)
+            }
+        }
     }
     
     func timeString(from time: Double) -> String {
@@ -61,29 +65,6 @@ struct TimerTwo: View {
         return "\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds)),\(String(format: "%02d", milliseconds))"
     }
     
-    func startTimer() {
-        if timer == nil {
-            timerActive = true
-            timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
-                if timeRemaining > 0 {
-                    timeRemaining -= 0.01
-                } else {
-                    stopTimer()
-                    WKInterfaceDevice.current().play(.notification)
-                }
-            }
-        }
-    }
-    
-    func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-        timerActive = false
-    }
-    
-    func resetTimer() {
-        timeRemaining = 90.0
-    }
 }
 
 #Preview {

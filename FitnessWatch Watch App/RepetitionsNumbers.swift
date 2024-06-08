@@ -23,7 +23,7 @@ struct RepetitionsNumbers: View {
                     .frame(height: 100.0)
                     .pickerStyle(WheelPickerStyle())
                     
-                    NavigationLink(destination: MainView()) {
+                    NavigationLink(destination: TabMainView()) {
                         Image(systemName: "checkmark.circle.fill")
                             .resizable()
                             .frame(width: 30, height: 30)

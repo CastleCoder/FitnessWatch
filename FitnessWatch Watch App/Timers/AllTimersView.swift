@@ -18,7 +18,7 @@ struct AllTimersView: View {
                     NavigationLink(destination: TimerOne()) {
                         VStack {
                             Text("60")
-                                .font(.title)
+                                .font(.title2)
                                 .foregroundColor(.white)
                             Text("s")
                                 .font(.title3)
@@ -37,10 +37,10 @@ struct AllTimersView: View {
                     .padding(10)
                     
                    // Spacer()
-                    NavigationLink(destination: TimerTwo()) {
+                    NavigationLink(destination: TimerThree()) {
                         VStack {
-                            Text("90")
-                                .font(.title)
+                            Text("120")
+                                .font(.title2)
                                 .foregroundColor(.white)
                             Text("s")
                                 .font(.title3)
@@ -64,10 +64,10 @@ struct AllTimersView: View {
                 VStack {
                     Spacer()
 
-                    NavigationLink(destination: TimerThree()) {
+                    NavigationLink(destination: TimerTwo()) {
                         VStack {
-                            Text("120")
-                                .font(.title)
+                            Text("90")
+                                .font(.title2)
                                 .foregroundColor(.white)
                             Text("s")
                                 .font(.title3)
@@ -87,8 +87,8 @@ struct AllTimersView: View {
                     //Spacer()
                     NavigationLink(destination: TimerFour()) {
                         VStack {
-                            Text("160")
-                                .font(.title)
+                            Text("150")
+                                .font(.title2)
                                 .foregroundColor(.white)
                             Text("s")
                                 .font(.title3)
@@ -110,8 +110,7 @@ struct AllTimersView: View {
                 }
                 Spacer()
             }
-            .padding(.top, 45)
-            .edgesIgnoringSafeArea(.bottom)
+            .padding()
             //.navigationTitle(Text("Compte à rebours"))
         }
     }

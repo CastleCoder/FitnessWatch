@@ -9,36 +9,34 @@ import SwiftUI
 
 struct Chronometer: View {
     
-    @State private var elapsedTime: Double = 0.0
-    @State private var timerActive = false
-    @State private var timer: Timer? = nil
+    @ObservedObject var timerManager = TimerManager.shared
     
     var body: some View {
         VStack {
-            Text(timeString(from: elapsedTime))
+            Text(timeString(from: timerManager.elapsedTime))
                 .font(.largeTitle)
                 .padding()
             
             HStack {
                 Spacer()
                 Button(action: {
-                    if timerActive {
-                        stopTimer()
+                    if timerManager.timerActive {
+                        timerManager.stopTimer()
                     } else {
-                        startTimer()
+                        timerManager.startTimer()
                     }
                 }) {
-                    Image(systemName: timerActive ? "stop.circle.fill" : "play.circle.fill")
+                    Image(systemName: timerManager.timerActive ? "stop.circle.fill" : "play.circle.fill")
                         .resizable()
                         .frame(width: 40, height: 40)
                         .padding()
-                        .foregroundColor(timerActive ? .red : .green)
+                        .foregroundColor(timerManager.timerActive ? .red : .green)
                 }
                 .buttonStyle(PlainButtonStyle())
                 
-                if !timerActive {
+                if !timerManager.timerActive {
                     Spacer()
-                    Button(action: resetTimer) {
+                    Button(action: timerManager.resetTimer) {
                         Image(systemName: "arrow.counterclockwise.circle.fill")
                             .resizable()
                             .frame(width: 40, height: 40)
@@ -50,7 +48,6 @@ struct Chronometer: View {
                 Spacer()
             }
         }
-        .onAppear(perform: resetTimer)
     }
     
     func timeString(from time: Double) -> String {
@@ -60,25 +57,8 @@ struct Chronometer: View {
         return "\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds)),\(String(format: "%02d", milliseconds))"
     }
     
-    func startTimer() {
-        if timer == nil {
-            timerActive = true
-            timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
-                elapsedTime += 0.01
-            }
-        }
-    }
-    
-    func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-        timerActive = false
-    }
-    
-    func resetTimer() {
-        elapsedTime = 0.0
-    }
 }
+
 
 #Preview {
     Chronometer()

@@ -11,7 +11,7 @@ import WatchKit
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            NavigationLink(destination: MainView()){
+            NavigationLink(destination: TabMainView()){
                 Text("Commencer la séance")
             }
                 .padding()
