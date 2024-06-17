@@ -12,12 +12,14 @@ struct MuscleExercicesView: View {
     
     let exerciceGroup = ExerciceData.muscleGroups
     
-    let groupName: String
+    @State var groupName: String
+    @Binding var ExerciceChoose: String
+
     
     var body: some View {
         if let group = ExerciceData.muscleGroups.first(where: { $0.name == groupName }) {
                     List(group.exercices, id: \.id) { exercice in
-                        NavigationLink(exercice.name, destination: ChooseWeight())
+                        NavigationLink(exercice.name, destination: CurrentInformationsView(ExerciceChoose: exercice.name, groupName: groupName))
                     }
                     .navigationTitle(Text("Exercices pour \(groupName)"))
                 } else {
@@ -29,5 +31,5 @@ struct MuscleExercicesView: View {
 }
 
 #Preview {
-    MuscleExercicesView(groupName: "Pectoraux")
+    MuscleExercicesView(groupName: "Pectoraux", ExerciceChoose: .constant("À choisir"))
 }

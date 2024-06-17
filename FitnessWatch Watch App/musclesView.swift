@@ -16,11 +16,11 @@ struct MusclesView: View {
     var body: some View {
         NavigationStack {
             List(muscleGroup, id: \.name) { group in
-                NavigationLink(destination: MuscleExercicesView(groupName: group.name)) {
+                NavigationLink(destination: MuscleExercicesView(groupName: group.name, ExerciceChoose: .constant("À choisir"))) {
                     Text(group.name)
                 }
             }
-            .navigationTitle(Text("Groupes Musculaires"))
+            //.navigationTitle(Text("Groupes Musculaires"))
            
         }
     }

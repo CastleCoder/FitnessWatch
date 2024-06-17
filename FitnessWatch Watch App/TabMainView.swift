@@ -15,10 +15,10 @@ struct TabMainView: View {
             SecondaryMainPage()
                 .tag(0)
             
-            MainView()
+            CurrentInformationsView(ExerciceChoose: "À choisir", groupName: "À choisir")
                 .tag(1)
             
-            Chronometer()
+            AllTimers()
                 .tag(2)
         }
         .navigationBarBackButtonHidden(true)

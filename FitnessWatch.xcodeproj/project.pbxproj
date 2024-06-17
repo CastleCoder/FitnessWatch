@@ -12,6 +12,9 @@
 		971A0C852C1228F6009337C1 /* CountDownTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C842C1228F6009337C1 /* CountDownTimerManager.swift */; };
 		971A0C872C144974009337C1 /* CurrentInformationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C862C144974009337C1 /* CurrentInformationsView.swift */; };
 		971A0C892C144D2B009337C1 /* HistoricalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C882C144D2B009337C1 /* HistoricalView.swift */; };
+		971A0C8B2C1771E8009337C1 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C8A2C1771E8009337C1 /* Series.swift */; };
+		971A0C8D2C1799B4009337C1 /* MuscleExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C8C2C1799B4009337C1 /* MuscleExerciseDetailView.swift */; };
+		971A0C902C179FAB009337C1 /* MusclesViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C8F2C179FAB009337C1 /* MusclesViews.swift */; };
 		971CF4862BFB7B7B00BD79A6 /* TimerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4852BFB7B7B00BD79A6 /* TimerOne.swift */; };
 		971CF4892BFB859300BD79A6 /* TimerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4882BFB859300BD79A6 /* TimerTwo.swift */; };
 		971CF48B2BFB859D00BD79A6 /* TimerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF48A2BFB859D00BD79A6 /* TimerThree.swift */; };
@@ -19,10 +22,10 @@
 		971CF48F2BFD1CD300BD79A6 /* AllTimersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF48E2BFD1CD300BD79A6 /* AllTimersView.swift */; };
 		971CF4912BFD3F7800BD79A6 /* Chronometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4902BFD3F7800BD79A6 /* Chronometer.swift */; };
 		971CF4932BFD412600BD79A6 /* AllTimers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4922BFD412600BD79A6 /* AllTimers.swift */; };
+		973410662C1B95BA00E10CC9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973410652C1B95BA00E10CC9 /* DataManager.swift */; };
 		974F4DDB2BF1693F0033B74B /* dataExercices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDA2BF1693F0033B74B /* dataExercices.swift */; };
 		974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDF2BF16A9A0033B74B /* MusclesView.swift */; };
 		974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */; };
-		977D47772BF552AD0033D80D /* ContinuedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977D47762BF552AD0033D80D /* ContinuedView.swift */; };
 		9793D68B2BF4F75B00DB0D03 /* ChooseWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793D68A2BF4F75B00DB0D03 /* ChooseWeight.swift */; };
 		9793D68D2BF4F9A800DB0D03 /* RepetitionsNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793D68C2BF4F9A800DB0D03 /* RepetitionsNumbers.swift */; };
 		97A81EFB2C03DAD30024A46A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A81EFA2C03DAD30024A46A /* MainView.swift */; };
@@ -69,6 +72,9 @@
 		971A0C842C1228F6009337C1 /* CountDownTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerManager.swift; sourceTree = "<group>"; };
 		971A0C862C144974009337C1 /* CurrentInformationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentInformationsView.swift; sourceTree = "<group>"; };
 		971A0C882C144D2B009337C1 /* HistoricalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalView.swift; sourceTree = "<group>"; };
+		971A0C8A2C1771E8009337C1 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
+		971A0C8C2C1799B4009337C1 /* MuscleExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleExerciseDetailView.swift; sourceTree = "<group>"; };
+		971A0C8F2C179FAB009337C1 /* MusclesViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViews.swift; sourceTree = "<group>"; };
 		971CF4852BFB7B7B00BD79A6 /* TimerOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerOne.swift; sourceTree = "<group>"; };
 		971CF4882BFB859300BD79A6 /* TimerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTwo.swift; sourceTree = "<group>"; };
 		971CF48A2BFB859D00BD79A6 /* TimerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerThree.swift; sourceTree = "<group>"; };
@@ -76,10 +82,10 @@
 		971CF48E2BFD1CD300BD79A6 /* AllTimersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTimersView.swift; sourceTree = "<group>"; };
 		971CF4902BFD3F7800BD79A6 /* Chronometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chronometer.swift; sourceTree = "<group>"; };
 		971CF4922BFD412600BD79A6 /* AllTimers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTimers.swift; sourceTree = "<group>"; };
+		973410652C1B95BA00E10CC9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		974F4DDA2BF1693F0033B74B /* dataExercices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataExercices.swift; sourceTree = "<group>"; };
 		974F4DDF2BF16A9A0033B74B /* MusclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesView.swift; sourceTree = "<group>"; };
 		974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleExercicesView.swift; sourceTree = "<group>"; };
-		977D47762BF552AD0033D80D /* ContinuedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuedView.swift; sourceTree = "<group>"; };
 		9793D68A2BF4F75B00DB0D03 /* ChooseWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWeight.swift; sourceTree = "<group>"; };
 		9793D68C2BF4F9A800DB0D03 /* RepetitionsNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionsNumbers.swift; sourceTree = "<group>"; };
 		97A81EFA2C03DAD30024A46A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -115,6 +121,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		971A0C8E2C179F85009337C1 /* HistoricalViews */ = {
+			isa = PBXGroup;
+			children = (
+				971A0C882C144D2B009337C1 /* HistoricalView.swift */,
+				971A0C8C2C1799B4009337C1 /* MuscleExerciseDetailView.swift */,
+				971A0C8F2C179FAB009337C1 /* MusclesViews.swift */,
+			);
+			path = HistoricalViews;
+			sourceTree = "<group>";
+		};
 		971CF4872BFB854200BD79A6 /* Timers */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +150,8 @@
 				974F4DDA2BF1693F0033B74B /* dataExercices.swift */,
 				97A81EFC2C03E0B50024A46A /* TimerManager.swift */,
 				971A0C842C1228F6009337C1 /* CountDownTimerManager.swift */,
+				971A0C8A2C1771E8009337C1 /* Series.swift */,
+				973410652C1B95BA00E10CC9 /* DataManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -178,6 +196,7 @@
 		97C10DA22BC997CD00023E7D /* FitnessWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				971A0C8E2C179F85009337C1 /* HistoricalViews */,
 				971CF4872BFB854200BD79A6 /* Timers */,
 				974F4DDC2BF169600033B74B /* Data */,
 				97C10DA32BC997CD00023E7D /* FitnessWatchApp.swift */,
@@ -189,13 +208,11 @@
 				974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */,
 				9793D68A2BF4F75B00DB0D03 /* ChooseWeight.swift */,
 				9793D68C2BF4F9A800DB0D03 /* RepetitionsNumbers.swift */,
-				977D47762BF552AD0033D80D /* ContinuedView.swift */,
 				971CF4922BFD412600BD79A6 /* AllTimers.swift */,
 				97A81EFA2C03DAD30024A46A /* MainView.swift */,
 				971A0C802C0F8330009337C1 /* TabMainView.swift */,
 				971A0C822C0F8E6A009337C1 /* SecondaryMainPage.swift */,
 				971A0C862C144974009337C1 /* CurrentInformationsView.swift */,
-				971A0C882C144D2B009337C1 /* HistoricalView.swift */,
 			);
 			path = "FitnessWatch Watch App";
 			sourceTree = "<group>";
@@ -330,18 +347,21 @@
 				974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */,
 				971A0C872C144974009337C1 /* CurrentInformationsView.swift in Sources */,
 				971CF48F2BFD1CD300BD79A6 /* AllTimersView.swift in Sources */,
+				973410662C1B95BA00E10CC9 /* DataManager.swift in Sources */,
 				974F4DDB2BF1693F0033B74B /* dataExercices.swift in Sources */,
 				971A0C852C1228F6009337C1 /* CountDownTimerManager.swift in Sources */,
 				97A81EFB2C03DAD30024A46A /* MainView.swift in Sources */,
 				971CF4912BFD3F7800BD79A6 /* Chronometer.swift in Sources */,
-				977D47772BF552AD0033D80D /* ContinuedView.swift in Sources */,
 				9793D68D2BF4F9A800DB0D03 /* RepetitionsNumbers.swift in Sources */,
 				97A81EFD2C03E0B50024A46A /* TimerManager.swift in Sources */,
+				971A0C8B2C1771E8009337C1 /* Series.swift in Sources */,
 				971A0C892C144D2B009337C1 /* HistoricalView.swift in Sources */,
 				971A0C832C0F8E6A009337C1 /* SecondaryMainPage.swift in Sources */,
 				974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */,
 				9793D68B2BF4F75B00DB0D03 /* ChooseWeight.swift in Sources */,
+				971A0C902C179FAB009337C1 /* MusclesViews.swift in Sources */,
 				971A0C812C0F8330009337C1 /* TabMainView.swift in Sources */,
+				971A0C8D2C1799B4009337C1 /* MuscleExerciseDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
