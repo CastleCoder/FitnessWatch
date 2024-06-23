@@ -6,20 +6,26 @@
 //
 
 import SwiftUI
-import WatchKit
+import SwiftData
 
 struct ContentView: View {
+    @StateObject private var dataManager = DataManager()
+    @Environment(\.modelContext) private var context
+    @Query private var items: [Series]
+    
     var body: some View {
-        NavigationStack {
-            NavigationLink(destination: TabMainView()){
-                Text("Commencer la séance")
+        
+        NavigationView {
+            VStack {
+                NavigationLink(destination: CurrentInformationsView(ExerciceChoose: "À choisir", groupName: "hello").environmentObject(dataManager)) {
+                    Text("Current Informations")
+                }
+                NavigationLink(destination: HistoricalView().environmentObject(dataManager)) {
+                    Text("View History")
+                }
             }
-                .padding()
-            NavigationLink(destination: AllTimers()){
-                Text("Timer")
-            }
-                .padding()
         }
+        .environmentObject(dataManager)
     }
 }
 

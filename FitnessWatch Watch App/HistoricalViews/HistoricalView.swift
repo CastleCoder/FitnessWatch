@@ -9,16 +9,20 @@ import SwiftUI
 
 struct HistoricalView: View {
     @EnvironmentObject var dataManager: DataManager
+    @State private var selectedDate: Date?
+
     
     var body: some View {
         List {
             let groupedByDate = Dictionary(grouping: dataManager.seriesList) { Calendar.current.startOfDay(for: $0.date) }
-            ForEach(groupedByDate.keys.sorted(), id: \.self) { date in
-                NavigationLink(destination: MusclesViews(date: date)) {
-                    Text("\(date, formatter: dateFormatter)")
-                }
-            }
-        }
+                        let sortedDates = groupedByDate.keys.sorted(by: >) // Tri par date descendante
+
+                        ForEach(sortedDates, id: \.self) { date in
+                            NavigationLink(destination: MusclesViews(date: date)) {
+                                Text("\(date, formatter: dateFormatter)")
+                            }
+                        }
+                    }
         .navigationTitle("Historique")
     }
     
@@ -33,4 +37,3 @@ struct HistoricalView: View {
     HistoricalView()
         .environmentObject(DataManager())
 }
-

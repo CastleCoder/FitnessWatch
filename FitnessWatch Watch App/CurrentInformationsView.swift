@@ -10,7 +10,7 @@ import SwiftUI
 struct CurrentInformationsView: View {
     
     @EnvironmentObject var dataManager: DataManager
-
+    
     @State var ExerciceChoose : String
     @State var WeightChoose : Float = 0
     @State var RepChoose : Float = 0
@@ -18,14 +18,14 @@ struct CurrentInformationsView: View {
     
     @State var groupName: String
     @State private var selectedTab = 1
-
+    
     
     
     
     
     var body: some View {
         TabView(selection: $selectedTab) {
-
+            
             SecondaryMainPage()
                 .tag(0)
             
@@ -75,9 +75,8 @@ struct CurrentInformationsView: View {
                     Spacer()
                     
                     Button(action: {
-                        let newSeries = Series(date: Date(), muscle: groupName, exercise: ExerciceChoose, weight: WeightChoose, reps: RepChoose, sets: set)
-                        dataManager.seriesList.append(newSeries)
-                        set += 1
+                        dataManager.addSeries(muscle: groupName, exercise: ExerciceChoose, weight: WeightChoose, reps: RepChoose, sets: set)
+                            set += 1
                     }) {
                         Text("Validé la série")
                             .padding()
