@@ -15,13 +15,13 @@ struct TabMainView: View {
             SecondaryMainPage()
                 .tag(0)
             
-            CurrentInformationsView(ExerciceChoose: "À choisir", groupName: "À choisir")
+            CurrentInformationsView(groupName: "À choisir", ExerciceChoose: "À choisir")
                 .tag(1)
             
             AllTimers()
                 .tag(2)
         }
-        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 

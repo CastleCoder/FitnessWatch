@@ -10,14 +10,17 @@ import SwiftData
 
 struct ContentView: View {
     @StateObject private var dataManager = DataManager()
+    
     @Environment(\.modelContext) private var context
+    @State private var ExerciceChoose: String = "À choisir"
+    @State private var groupName: String = "À choisir"
     @Query private var items: [Series]
     
     var body: some View {
         
         NavigationView {
             VStack {
-                NavigationLink(destination: CurrentInformationsView(ExerciceChoose: "À choisir", groupName: "hello").environmentObject(dataManager)) {
+                NavigationLink(destination: CurrentInformationsView(groupName: groupName, ExerciceChoose: ExerciceChoose).environmentObject(dataManager)) {
                     Text("Current Informations")
                 }
                 NavigationLink(destination: HistoricalView().environmentObject(dataManager)) {

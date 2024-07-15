@@ -6,17 +6,20 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MusclesViews: View {
-    @EnvironmentObject var dataManager: DataManager
     var date: Date
-    
+
+    @Query private var seriesList: [Series]
+
     var body: some View {
         List {
-            let seriesOnDate = dataManager.seriesList.filter { Calendar.current.isDate($0.date, inSameDayAs: date) }
+            let seriesOnDate = seriesList.filter { Calendar.current.isDate($0.date, inSameDayAs: date) }
             let groupedByMuscle = Dictionary(grouping: seriesOnDate) { $0.muscle }
-            ForEach(groupedByMuscle.keys.sorted(), id: \.self) { muscle in
-                NavigationLink(destination: MuscleExerciseDetailView(muscle: muscle, series: groupedByMuscle[muscle]!)) {
+            
+            ForEach(Array(groupedByMuscle.keys.sorted()), id: \.self) { muscle in
+                NavigationLink(destination: MuscleExerciseDetailView(muscle: muscle, date: date)) {
                     Text(muscle)
                 }
             }
@@ -24,6 +27,8 @@ struct MusclesViews: View {
         .navigationTitle("\(date, formatter: dateFormatter)")
     }
     
+
+
     private var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -33,5 +38,4 @@ struct MusclesViews: View {
 
 #Preview {
     MusclesViews(date: Date())
-        .environmentObject(DataManager())
 }

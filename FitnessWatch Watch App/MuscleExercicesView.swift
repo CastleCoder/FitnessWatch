@@ -14,18 +14,24 @@ struct MuscleExercicesView: View {
     
     @State var groupName: String
     @Binding var ExerciceChoose: String
-
+    
+    @State var A: String = ""
+    @State var B: String = ""
+    
     
     var body: some View {
         if let group = ExerciceData.muscleGroups.first(where: { $0.name == groupName }) {
-                    List(group.exercices, id: \.id) { exercice in
-                        NavigationLink(exercice.name, destination: CurrentInformationsView(ExerciceChoose: exercice.name, groupName: groupName))
-                    }
-                    .navigationTitle(Text("Exercices pour \(groupName)"))
-                } else {
-                    Text("Aucun exercice trouvé pour \(groupName)")
-                        .navigationTitle(Text("Erreur"))
-                }
+            List(group.exercices, id: \.id) { exercice in
+                NavigationLink(exercice.name, destination: CurrentInformationsView(groupName: groupName, ExerciceChoose: exercice.name))
+                var A = groupName
+                var B = ExerciceChoose
+            }
+            
+            .navigationTitle(Text("Exercices pour \(groupName)"))
+        } else {
+            Text("Aucun exercice trouvé pour \(groupName)")
+                .navigationTitle(Text("Erreur"))
+        }
         
     }
 }

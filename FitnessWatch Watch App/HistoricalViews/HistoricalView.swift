@@ -6,23 +6,24 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HistoricalView: View {
-    @EnvironmentObject var dataManager: DataManager
-    @State private var selectedDate: Date?
+    @Query(sort: \Series.date, order: .reverse) private var seriesList: [Series]
 
-    
     var body: some View {
         List {
-            let groupedByDate = Dictionary(grouping: dataManager.seriesList) { Calendar.current.startOfDay(for: $0.date) }
-                        let sortedDates = groupedByDate.keys.sorted(by: >) // Tri par date descendante
-
-                        ForEach(sortedDates, id: \.self) { date in
-                            NavigationLink(destination: MusclesViews(date: date)) {
-                                Text("\(date, formatter: dateFormatter)")
-                            }
-                        }
-                    }
+            let groupedByDate = Dictionary(grouping: seriesList) { series in
+                Calendar.current.startOfDay(for: series.date)
+            }
+            
+            let sortedDates = groupedByDate.keys.sorted(by: >)
+            ForEach(sortedDates, id: \.self) { date in
+                NavigationLink(destination: MusclesViews(date: date)) {
+                    Text("\(date, formatter: dateFormatter)")
+                }
+            }
+        }
         .navigationTitle("Historique")
     }
     
@@ -33,7 +34,8 @@ struct HistoricalView: View {
     }
 }
 
+
+
 #Preview {
     HistoricalView()
-        .environmentObject(DataManager())
 }

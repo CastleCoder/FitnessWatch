@@ -4,17 +4,21 @@
 //
 //  Created by Cyrille Chateau on 26/05/2024.
 //
-
+/*
 import SwiftUI
 
 struct MainView: View {
+    
+    @SceneStorage("groupName") private var groupName: String = "À choisir"
+    @SceneStorage("ExerciceChoose") private var ExerciceChoose: String = "À choisir"
+
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
                 Spacer()
                 HStack {
                     Spacer()
-                    NavigationLink(destination: MusclesView()) {
+                    NavigationLink(destination: MusclesView(groupName: $groupName, ExerciceChoose: $ExerciceChoose)) {
                         Text("Exer")
                             .padding()
                             .background(Circle().fill(Color.black))
@@ -92,3 +96,4 @@ struct MainView: View {
 #Preview {
     MainView()
 }
+*/

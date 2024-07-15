@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SecondaryMainPage: View {
+    
     var body: some View {
         TabView {
             NavigationView {
@@ -24,21 +25,6 @@ struct SecondaryMainPage: View {
                                         .strokeBorder(Color.orange, lineWidth: 4)
                                         .frame(width: 80.0, height: 80.0)
                                     
-                                )
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        .padding(10)
-                        Spacer()
-                        NavigationLink(destination: ChooseWeight()) {
-                            Image(systemName: "music.quarternote.3")
-                                .resizable()
-                                .padding()
-                                .frame(width: 40.0, height: 40.0)
-                                .background(Circle().fill(Color.black))
-                                .overlay(
-                                    Circle()
-                                        .strokeBorder(Color.orange, lineWidth: 4)
-                                        .frame(width: 80.0, height: 80.0)
                                 )
                         }
                         .buttonStyle(PlainButtonStyle())

@@ -6,30 +6,43 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MuscleExerciseDetailView: View {
     var muscle: String
-    var series: [Series]
+    var date: Date
     
+    @Query private var itemSerie: [Series]
+
     var body: some View {
         List {
-            let groupedByExercise = Dictionary(grouping: series) { $0.exercise }
+            let filteredSeries = itemSerie.filter {
+                Calendar.current.isDate($0.date, inSameDayAs: date) && $0.muscle == muscle
+            }
+            let groupedByExercise = Dictionary(grouping: filteredSeries) { $0.exercise }
+            
             ForEach(groupedByExercise.keys.sorted(), id: \.self) { exercise in
                 VStack(alignment: .leading) {
                     Text(exercise)
                         .font(.headline)
-                    ForEach(groupedByExercise[exercise]!) { serie in
-                        Text("\(String(format: "%.0f", serie.weight)) kg, \(String(format: "%.0f", serie.reps)) reps, Set n°\((serie.sets)+1) ")
-                            .font(.subheadline)
-                            .fontWeight(.thin)
+                    
+                    if let seriesForExercise = groupedByExercise[exercise] {
+                        let sortedSeries = seriesForExercise.sorted { $0.date < $1.date }
+                        
+                        ForEach(Array(sortedSeries.enumerated()), id: \.element.id) { index, serie in
+                            Text("\(String(format: "%.0f", serie.weight)) kg, \(String(format: "%.0f", serie.reps)) reps, Set n°\((index + 1)) ")
+                                .font(.subheadline)
+                                .fontWeight(.thin)
+                        }
                     }
                 }
             }
         }
-        //.navigationTitle(muscle)
+        .navigationTitle(muscle)
     }
 }
 
 #Preview {
-    MuscleExerciseDetailView(muscle: "Pectoraux", series: [Series(date: Date(), muscle: "Pectoraux", exercise: "Bench Press", weight: 100, reps: 10, sets: 3)])
+    MuscleExerciseDetailView(muscle: "Pectoraux", date: Date())
 }
+

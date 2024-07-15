@@ -34,6 +34,7 @@ struct ExerciceData {
         "DC barre guidée",
         "DI",
         "DIH",
+        "Hammer Strenght",
         "DI barre guidée",
         "Écartés (poulis)",
         "Écartés (haltères)"

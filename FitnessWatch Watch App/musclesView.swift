@@ -20,7 +20,6 @@ struct MusclesView: View {
                     Text(group.name)
                 }
             }
-            //.navigationTitle(Text("Groupes Musculaires"))
            
         }
     }
