@@ -7,35 +7,32 @@
 
 import SwiftUI
 
-
 struct MuscleExercicesView: View {
-    
     let exerciceGroup = ExerciceData.muscleGroups
     
     @State var groupName: String
-    @Binding var ExerciceChoose: String
-    
-    @State var A: String = ""
-    @State var B: String = ""
-    
+    @AppStorage("ExerciceChoose") private var ExerciceChoose: String = "À choisir"
     
     var body: some View {
         if let group = ExerciceData.muscleGroups.first(where: { $0.name == groupName }) {
             List(group.exercices, id: \.id) { exercice in
-                NavigationLink(exercice.name, destination: CurrentInformationsView(groupName: groupName, ExerciceChoose: exercice.name))
-                var A = groupName
-                var B = ExerciceChoose
+                NavigationLink(destination: CurrentInformationsView()) {
+                    Text(exercice.name)
+                        .onTapGesture {
+                            ExerciceChoose = exercice.name
+                            print("Selected exercise: \(ExerciceChoose) for muscle group: \(groupName)")
+
+                        }
+                }
             }
-            
             .navigationTitle(Text("Exercices pour \(groupName)"))
         } else {
             Text("Aucun exercice trouvé pour \(groupName)")
                 .navigationTitle(Text("Erreur"))
         }
-        
     }
 }
 
 #Preview {
-    MuscleExercicesView(groupName: "Pectoraux", ExerciceChoose: .constant("À choisir"))
+    MuscleExercicesView(groupName: "Pectoraux")
 }

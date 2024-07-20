@@ -20,7 +20,7 @@ struct ContentView: View {
         
         NavigationView {
             VStack {
-                NavigationLink(destination: CurrentInformationsView(groupName: groupName, ExerciceChoose: ExerciceChoose).environmentObject(dataManager)) {
+                NavigationLink(destination: CurrentInformationsView().environmentObject(dataManager)) {
                     Text("Current Informations")
                 }
                 NavigationLink(destination: HistoricalView().environmentObject(dataManager)) {

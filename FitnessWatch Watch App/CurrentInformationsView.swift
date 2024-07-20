@@ -14,8 +14,9 @@ struct CurrentInformationsView: View {
     @EnvironmentObject var dataManager: DataManager
     @Environment(\.modelContext) private var context
     
-    @State var groupName: String = "À choisir"
-    @State var ExerciceChoose: String = "À choisir"
+    @AppStorage("groupName") private var groupName = "Pectoraux"
+    @AppStorage("ExerciceChoose") private var ExerciceChoose: String = "À choisir"
+    
     @SceneStorage("WeightChoose") var WeightChoose: Double = 0.0
     @SceneStorage("RepChoose") var RepChoose: Double = 0.0
     @SceneStorage("set") var set: Int = 0
@@ -23,10 +24,6 @@ struct CurrentInformationsView: View {
     @State private var selectedTab = 1
     @State private var isWeightActive = false
     @State private var isRepActive = false
-    
-    @State var A: String = "À choisir"
-    @State var B: String = "À choisir"
-
     
     
     var body: some View {
@@ -42,15 +39,16 @@ struct CurrentInformationsView: View {
                             Text("Muscle:")
                             Spacer()
                             NavigationLink(destination: MusclesView()) {
-                                Text(A)                            }
+                                Text(groupName)
+                            }
                             .buttonStyle(PlainButtonStyle())
                         }
                         
                         HStack {
                             Text("Exercise:")
                             Spacer()
-                            NavigationLink(destination: MuscleExercicesView(groupName: groupName, ExerciceChoose: $ExerciceChoose)) {
-                                Text(B)
+                            NavigationLink(destination: MuscleExercicesView(groupName: groupName)) {
+                                Text(ExerciceChoose)
                             }
                             
                             .buttonStyle(PlainButtonStyle())

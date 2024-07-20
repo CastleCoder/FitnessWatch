@@ -15,7 +15,7 @@ struct TabMainView: View {
             SecondaryMainPage()
                 .tag(0)
             
-            CurrentInformationsView(groupName: "À choisir", ExerciceChoose: "À choisir")
+            CurrentInformationsView()
                 .tag(1)
             
             AllTimers()
