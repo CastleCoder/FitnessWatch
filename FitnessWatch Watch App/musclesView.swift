@@ -9,25 +9,20 @@ import SwiftUI
 
 
 struct MusclesView: View {
-    
+        
     let muscleGroup = ExerciceData.muscleGroups
-    @AppStorage("groupName") private var groupName = "Pectoraux"
     
     var body: some View {
         NavigationStack {
             List(muscleGroup, id: \.name) { group in
-                NavigationLink(destination: MuscleExercicesView(groupName: group.name)) {
+                NavigationLink(destination: MuscleExercicesView(groupName: group.name, ExerciceChoose: "À choisir")) {
                     Text(group.name)
-                        .onTapGesture {
-                            groupName = group.name
-                        }
                 }
             }
-            
+           
         }
     }
 }
-
 
 #Preview {
     MusclesView()

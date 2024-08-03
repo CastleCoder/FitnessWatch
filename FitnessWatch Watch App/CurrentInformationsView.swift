@@ -14,8 +14,13 @@ struct CurrentInformationsView: View {
     @EnvironmentObject var dataManager: DataManager
     @Environment(\.modelContext) private var context
     
-    @AppStorage("groupName") private var groupName = "Pectoraux"
-    @AppStorage("ExerciceChoose") private var ExerciceChoose: String = "À choisir"
+    @AppStorage("savedGroupName") private var savedGroupName: String = ""
+    @AppStorage("savedExerciceName") private var savedExerciceName: String = ""
+
+
+    @State var groupName: String = "À choisir"
+    @State var ExerciceChoose: String = "À choisir"
+    
     
     @SceneStorage("WeightChoose") var WeightChoose: Double = 0.0
     @SceneStorage("RepChoose") var RepChoose: Double = 0.0
@@ -24,6 +29,7 @@ struct CurrentInformationsView: View {
     @State private var selectedTab = 1
     @State private var isWeightActive = false
     @State private var isRepActive = false
+    
     
     
     var body: some View {
@@ -39,20 +45,28 @@ struct CurrentInformationsView: View {
                             Text("Muscle:")
                             Spacer()
                             NavigationLink(destination: MusclesView()) {
-                                Text(groupName)
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                        }
-                        
-                        HStack {
-                            Text("Exercise:")
-                            Spacer()
-                            NavigationLink(destination: MuscleExercicesView(groupName: groupName)) {
-                                Text(ExerciceChoose)
+                                Text(savedGroupName.isEmpty ? "À choisir" : savedGroupName)
                             }
                             
                             .buttonStyle(PlainButtonStyle())
                         }
+                        .onAppear {
+                            savedGroupName = groupName
+                            
+                        }
+                        HStack {
+                            Text("Exercise:")
+                            Spacer()
+                            NavigationLink(destination: MuscleExercicesView(groupName: groupName, ExerciceChoose: ExerciceChoose)) {
+                                Text(savedExerciceName.isEmpty ? "À choisir" : savedExerciceName)
+                            }
+                            .onAppear {
+                                savedExerciceName = ExerciceChoose
+                                
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                        
                         HStack {
                             Text("Poids:")
                             Spacer()
@@ -95,6 +109,8 @@ struct CurrentInformationsView: View {
                         Button(action: {
                             dataManager.addSeries(muscle: groupName, exercise: ExerciceChoose, weight: Float(WeightChoose), reps: Float(RepChoose), sets: set, context: context)
                             set += 1
+                            print("\(savedGroupName) & \(savedExerciceName)")
+
                         }) {
                             Text("Validé la série")
                                 .padding()
@@ -103,6 +119,8 @@ struct CurrentInformationsView: View {
                                 .cornerRadius(10)
                         }
                         .buttonStyle(PlainButtonStyle())
+                        
+                        
                     }
                     .onChange(of: ExerciceChoose, initial: false) {
                         set = 0
