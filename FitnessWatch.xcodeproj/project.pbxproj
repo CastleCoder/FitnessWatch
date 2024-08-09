@@ -144,6 +144,38 @@
 			path = Timers;
 			sourceTree = "<group>";
 		};
+		9733C3982C65250800FB6693 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				971CF4872BFB854200BD79A6 /* Timers */,
+				97C10DA72BC997CE00023E7D /* Assets.xcassets */,
+				974F4DDF2BF16A9A0033B74B /* MusclesView.swift */,
+				974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */,
+				971CF4922BFD412600BD79A6 /* AllTimers.swift */,
+				97A81EFA2C03DAD30024A46A /* MainView.swift */,
+				971A0C802C0F8330009337C1 /* TabMainView.swift */,
+				971A0C822C0F8E6A009337C1 /* SecondaryMainPage.swift */,
+				971A0C862C144974009337C1 /* CurrentInformationsView.swift */,
+				971A0C8E2C179F85009337C1 /* HistoricalViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9733C3992C65251600FB6693 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				974F4DDC2BF169600033B74B /* Data */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9733C39A2C65252300FB6693 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		974F4DDC2BF169600033B74B /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,20 +231,12 @@
 		97C10DA22BC997CD00023E7D /* FitnessWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				971A0C8E2C179F85009337C1 /* HistoricalViews */,
-				971CF4872BFB854200BD79A6 /* Timers */,
-				974F4DDC2BF169600033B74B /* Data */,
-				97C10DA32BC997CD00023E7D /* FitnessWatchApp.swift */,
-				97C10DA52BC997CD00023E7D /* ContentView.swift */,
-				97C10DA72BC997CE00023E7D /* Assets.xcassets */,
 				97C10DA92BC997CE00023E7D /* Preview Content */,
-				974F4DDF2BF16A9A0033B74B /* MusclesView.swift */,
-				974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */,
-				971CF4922BFD412600BD79A6 /* AllTimers.swift */,
-				97A81EFA2C03DAD30024A46A /* MainView.swift */,
-				971A0C802C0F8330009337C1 /* TabMainView.swift */,
-				971A0C822C0F8E6A009337C1 /* SecondaryMainPage.swift */,
-				971A0C862C144974009337C1 /* CurrentInformationsView.swift */,
+				97C10DA52BC997CD00023E7D /* ContentView.swift */,
+				97C10DA32BC997CD00023E7D /* FitnessWatchApp.swift */,
+				9733C39A2C65252300FB6693 /* ViewModel */,
+				9733C3992C65251600FB6693 /* Model */,
+				9733C3982C65250800FB6693 /* View */,
 			);
 			path = "FitnessWatch Watch App";
 			sourceTree = "<group>";
@@ -222,7 +246,8 @@
 			children = (
 				97C10DAA2BC997CE00023E7D /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			name = "Preview Content";
+			path = "Data/Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
