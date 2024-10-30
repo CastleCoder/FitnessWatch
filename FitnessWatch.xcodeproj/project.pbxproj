@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970DB1012CC9222D00AFAAEF /* FocusStateDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970DB1002CC9222D00AFAAEF /* FocusStateDemoView.swift */; };
+		970DB1032CCA3DC400AFAAEF /* FocusStateDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970DB1022CCA3DC400AFAAEF /* FocusStateDemoView.swift */; };
 		971A0C812C0F8330009337C1 /* TabMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C802C0F8330009337C1 /* TabMainView.swift */; };
 		971A0C832C0F8E6A009337C1 /* SecondaryMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C822C0F8E6A009337C1 /* SecondaryMainPage.swift */; };
 		971A0C852C1228F6009337C1 /* CountDownTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C842C1228F6009337C1 /* CountDownTimerManager.swift */; };
@@ -67,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		970DB1002CC9222D00AFAAEF /* FocusStateDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateDemoView.swift; sourceTree = "<group>"; };
+		970DB1022CCA3DC400AFAAEF /* FocusStateDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateDemoView.swift; sourceTree = "<group>"; };
 		971A0C802C0F8330009337C1 /* TabMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMainView.swift; sourceTree = "<group>"; };
 		971A0C822C0F8E6A009337C1 /* SecondaryMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryMainPage.swift; sourceTree = "<group>"; };
 		971A0C842C1228F6009337C1 /* CountDownTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerManager.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				971A0C802C0F8330009337C1 /* TabMainView.swift */,
 				971A0C822C0F8E6A009337C1 /* SecondaryMainPage.swift */,
 				971A0C862C144974009337C1 /* CurrentInformationsView.swift */,
+				970DB1002CC9222D00AFAAEF /* FocusStateDemoView.swift */,
 				971A0C8E2C179F85009337C1 /* HistoricalViews */,
 			);
 			path = View;
@@ -210,6 +215,7 @@
 		97C10D902BC997CC00023E7D /* FitnessWatch */ = {
 			isa = PBXGroup;
 			children = (
+				970DB1022CCA3DC400AFAAEF /* FocusStateDemoView.swift */,
 				97C10D912BC997CC00023E7D /* FitnessWatchApp.swift */,
 				97C10D932BC997CC00023E7D /* ContentView.swift */,
 				97C10D952BC997CD00023E7D /* Assets.xcassets */,
@@ -297,7 +303,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					97C10D8D2BC997CC00023E7D = {
 						CreatedOnToolsVersion = 15.3;
@@ -354,6 +360,7 @@
 			files = (
 				97C10D942BC997CC00023E7D /* ContentView.swift in Sources */,
 				97C10D922BC997CC00023E7D /* FitnessWatchApp.swift in Sources */,
+				970DB1032CCA3DC400AFAAEF /* FocusStateDemoView.swift in Sources */,
 				974C5CAA2C331C81000D5E60 /* MusclesListView.swift in Sources */,
 				974C5CAC2C331CB4000D5E60 /* MuscleExercicesListView.swift in Sources */,
 			);
@@ -385,6 +392,7 @@
 				974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */,
 				971A0C902C179FAB009337C1 /* MusclesViews.swift in Sources */,
 				971A0C812C0F8330009337C1 /* TabMainView.swift in Sources */,
+				970DB1012CC9222D00AFAAEF /* FocusStateDemoView.swift in Sources */,
 				97475D592C457E9A0094FFE6 /* CurrentSession.swift in Sources */,
 				971A0C8D2C1799B4009337C1 /* MuscleExerciseDetailView.swift in Sources */,
 			);
@@ -585,7 +593,6 @@
 		97C10DB32BC997CE00023E7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -619,7 +626,6 @@
 		97C10DB42BC997CE00023E7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

@@ -11,13 +11,14 @@ import SwiftData
 struct CurrentInformationsView: View {
     
     
+    
     @EnvironmentObject var dataManager: DataManager
     @Environment(\.modelContext) private var context
     
     @AppStorage("savedGroupName") private var savedGroupName: String = ""
     @AppStorage("savedExerciceName") private var savedExerciceName: String = ""
-
-
+    
+    
     @State var groupName: String = "À choisir"
     @State var ExerciceChoose: String = "À choisir"
     
@@ -27,8 +28,8 @@ struct CurrentInformationsView: View {
     @SceneStorage("set") var set: Int = 0
     
     @State private var selectedTab = 1
-    @State private var isWeightActive = false
-    @State private var isRepActive = false
+    
+    
     
     
     
@@ -52,7 +53,6 @@ struct CurrentInformationsView: View {
                         }
                         .onAppear {
                             savedGroupName = groupName
-                            
                         }
                         HStack {
                             Text("Exercise:")
@@ -70,28 +70,20 @@ struct CurrentInformationsView: View {
                         HStack {
                             Text("Poids:")
                             Spacer()
-                            // Display the weight and make it focusable for the crown
+                            
                             Text("\(String(format: "%.0f", WeightChoose)) KG")
-                                .foregroundColor(isWeightActive ? .green : .white)
-                                .focusable(true) { focused in
-                                    isWeightActive = focused
-                                }
+                                .focusable()
+                            
                                 .digitalCrownRotation($WeightChoose, from: 0.0, through: 300.0, by: 1.0, sensitivity: .medium)
-                                .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/(duration: 1), value: isWeightActive)
                             
                         }
                         HStack {
                             Text("Répétitions:")
                             Spacer()
-                            // Display the repetitions and make it focusable for the crown
-                            Text("\(String(format: "%.0f", RepChoose)) REP")
-                                .foregroundColor(isRepActive ? .green : .white)
-                                .focusable(true) { focused in
-                                    isRepActive = focused
-                                }
-                                .digitalCrownRotation($RepChoose, from: 0.0, through: 100.0, by: 1.0, sensitivity: .low)
-                                .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/(duration: 1), value: isRepActive)
                             
+                            Text("\(String(format: "%.0f", RepChoose)) REP")
+                                .focusable()
+                                .digitalCrownRotation($RepChoose, from: 0.0, through: 100.0, by: 1.0, sensitivity: .low)
                         }
                         HStack {
                             Text("N° de Série:")
@@ -110,7 +102,7 @@ struct CurrentInformationsView: View {
                             dataManager.addSeries(muscle: groupName, exercise: ExerciceChoose, weight: Float(WeightChoose), reps: Float(RepChoose), sets: set, context: context)
                             set += 1
                             print("\(savedGroupName) & \(savedExerciceName)")
-
+                            
                         }) {
                             Text("Validé la série")
                                 .padding()
@@ -118,14 +110,17 @@ struct CurrentInformationsView: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
                         }
+                        .disabled(groupName == "À choisir" || ExerciceChoose == "À choisir")
                         .buttonStyle(PlainButtonStyle())
                         
                         
                     }
-                    .onChange(of: ExerciceChoose, initial: false) {
+
+                    .onChange(of: savedExerciceName) {
                         set = 0
                         RepChoose = 0
                         WeightChoose = 0
+                        
                     }
                     
                     .padding(.top, 30)

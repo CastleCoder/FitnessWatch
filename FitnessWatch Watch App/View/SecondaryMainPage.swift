@@ -12,10 +12,10 @@ struct SecondaryMainPage: View {
     var body: some View {
         TabView {
             NavigationView {
-                VStack(spacing: 20) {
+                VStack(spacing: 10) {
                     //Spacer()
                     HStack{
-                        Spacer()
+//                        Spacer()
                         NavigationLink(destination: MusclesView()) {
                             Text("Stop")
                                 .padding()
@@ -23,7 +23,7 @@ struct SecondaryMainPage: View {
                                 .overlay(
                                     Circle()
                                         .strokeBorder(Color.orange, lineWidth: 4)
-                                        .frame(width: 80.0, height: 80.0)
+                                        .frame(width: 70.0, height: 70.0)
                                     
                                 )
                         }
@@ -32,18 +32,20 @@ struct SecondaryMainPage: View {
                         Spacer()
                     }
                     //Spacer()
-                    .padding(.bottom, 10)
+//                    .padding(.bottom, 10)
                     HStack {
                         Spacer()
                         
                         NavigationLink(destination: HistoricalView()) {
-                            Text("Historique")
+                            Image(systemName: "calendar")
+                                .resizable()
                                 .padding()
+                                .frame(width: 55.0, height: 55.0)
                                 .background(Circle().fill(Color.black))
                                 .overlay(
                                     Circle()
                                         .strokeBorder(Color.orange, lineWidth: 4)
-                                        .frame(width: 80.0, height: 80.0)
+                                        .frame(width: 70.0, height: 70.0)
                                 )
                         }
                         .buttonStyle(PlainButtonStyle())
@@ -58,7 +60,7 @@ struct SecondaryMainPage: View {
                                 .overlay(
                                     Circle()
                                         .strokeBorder(Color.orange, lineWidth: 4)
-                                        .frame(width: 80.0, height: 80.0)
+                                        .frame(width: 70.0, height: 70.0)
                                 )
                         }
                         .buttonStyle(PlainButtonStyle())
