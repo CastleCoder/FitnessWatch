@@ -18,19 +18,21 @@ struct MuscleExercicesView: View {
     
     
     var body: some View {
+        NavigationStack {
         if let group = ExerciceData.muscleGroups.first(where: { $0.name == groupName }) {
             List(group.exercices, id: \.id) { exercice in
                 NavigationLink(exercice.name, destination: CurrentInformationsView(groupName: groupName, ExerciceChoose: exercice.name))
-                   
+                
             }
             /*.onTapGesture {
-                print("Selected exercise: \(ExerciceChoose) for muscle group: \(groupName)")
-            }*/
+             print("Selected exercise: \(ExerciceChoose) for muscle group: \(groupName)")
+             }*/
             .navigationTitle(Text("Exercices pour \(groupName)"))
         } else {
             Text("Aucun exercice trouvé pour \(groupName)")
                 .navigationTitle(Text("Erreur"))
         }
+    }
         
     }
 }

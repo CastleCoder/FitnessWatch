@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		970DB1012CC9222D00AFAAEF /* FocusStateDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970DB1002CC9222D00AFAAEF /* FocusStateDemoView.swift */; };
-		970DB1032CCA3DC400AFAAEF /* FocusStateDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970DB1022CCA3DC400AFAAEF /* FocusStateDemoView.swift */; };
 		971A0C812C0F8330009337C1 /* TabMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C802C0F8330009337C1 /* TabMainView.swift */; };
 		971A0C832C0F8E6A009337C1 /* SecondaryMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C822C0F8E6A009337C1 /* SecondaryMainPage.swift */; };
 		971A0C852C1228F6009337C1 /* CountDownTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C842C1228F6009337C1 /* CountDownTimerManager.swift */; };
@@ -24,15 +23,22 @@
 		971CF48F2BFD1CD300BD79A6 /* AllTimersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF48E2BFD1CD300BD79A6 /* AllTimersView.swift */; };
 		971CF4912BFD3F7800BD79A6 /* Chronometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4902BFD3F7800BD79A6 /* Chronometer.swift */; };
 		971CF4932BFD412600BD79A6 /* AllTimers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4922BFD412600BD79A6 /* AllTimers.swift */; };
+		973038AE2CE161C600313299 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C8A2C1771E8009337C1 /* Series.swift */; };
+		973038B02CE1630A00313299 /* HistoricalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973038AF2CE1630A00313299 /* HistoricalView.swift */; };
+		973038B22CE1632300313299 /* MusclesViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973038B12CE1632300313299 /* MusclesViews.swift */; };
+		973038B42CE1633200313299 /* MuscleExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973038B32CE1633200313299 /* MuscleExerciseDetailView.swift */; };
 		973410662C1B95BA00E10CC9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973410652C1B95BA00E10CC9 /* DataManager.swift */; };
 		97475D592C457E9A0094FFE6 /* CurrentSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97475D582C457E9A0094FFE6 /* CurrentSession.swift */; };
-		974C5CAA2C331C81000D5E60 /* MusclesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C5CA92C331C81000D5E60 /* MusclesListView.swift */; };
-		974C5CAC2C331CB4000D5E60 /* MuscleExercicesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C5CAB2C331CB4000D5E60 /* MuscleExercicesListView.swift */; };
 		974F4DDB2BF1693F0033B74B /* dataExercices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDA2BF1693F0033B74B /* dataExercices.swift */; };
 		974F4DE02BF16A9A0033B74B /* MusclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDF2BF16A9A0033B74B /* MusclesView.swift */; };
 		974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */; };
+		975D4A572D063AFA00C18965 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975D4A562D063AFA00C18965 /* Connectivity.swift */; };
+		975D4A582D063AFA00C18965 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975D4A562D063AFA00C18965 /* Connectivity.swift */; };
+		977812182D07AE3200A797C6 /* ConnectivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977812172D07AE3200A797C6 /* ConnectivityDelegate.swift */; };
+		977812192D07AE7500A797C6 /* ConnectivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977812172D07AE3200A797C6 /* ConnectivityDelegate.swift */; };
 		97A81EFB2C03DAD30024A46A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A81EFA2C03DAD30024A46A /* MainView.swift */; };
 		97A81EFD2C03E0B50024A46A /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A81EFC2C03E0B50024A46A /* TimerManager.swift */; };
+		97BA100A2CFE440000A34942 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973410652C1B95BA00E10CC9 /* DataManager.swift */; };
 		97C10D922BC997CC00023E7D /* FitnessWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10D912BC997CC00023E7D /* FitnessWatchApp.swift */; };
 		97C10D942BC997CC00023E7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C10D932BC997CC00023E7D /* ContentView.swift */; };
 		97C10D962BC997CD00023E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C10D952BC997CD00023E7D /* Assets.xcassets */; };
@@ -70,7 +76,6 @@
 
 /* Begin PBXFileReference section */
 		970DB1002CC9222D00AFAAEF /* FocusStateDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateDemoView.swift; sourceTree = "<group>"; };
-		970DB1022CCA3DC400AFAAEF /* FocusStateDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateDemoView.swift; sourceTree = "<group>"; };
 		971A0C802C0F8330009337C1 /* TabMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMainView.swift; sourceTree = "<group>"; };
 		971A0C822C0F8E6A009337C1 /* SecondaryMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryMainPage.swift; sourceTree = "<group>"; };
 		971A0C842C1228F6009337C1 /* CountDownTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerManager.swift; sourceTree = "<group>"; };
@@ -86,13 +91,17 @@
 		971CF48E2BFD1CD300BD79A6 /* AllTimersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTimersView.swift; sourceTree = "<group>"; };
 		971CF4902BFD3F7800BD79A6 /* Chronometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chronometer.swift; sourceTree = "<group>"; };
 		971CF4922BFD412600BD79A6 /* AllTimers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTimers.swift; sourceTree = "<group>"; };
+		973038AF2CE1630A00313299 /* HistoricalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalView.swift; sourceTree = "<group>"; };
+		973038B12CE1632300313299 /* MusclesViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViews.swift; sourceTree = "<group>"; };
+		973038B32CE1633200313299 /* MuscleExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleExerciseDetailView.swift; sourceTree = "<group>"; };
 		973410652C1B95BA00E10CC9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		973B2C442CDE298C004EEF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		97475D582C457E9A0094FFE6 /* CurrentSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSession.swift; sourceTree = "<group>"; };
-		974C5CA92C331C81000D5E60 /* MusclesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesListView.swift; sourceTree = "<group>"; };
-		974C5CAB2C331CB4000D5E60 /* MuscleExercicesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleExercicesListView.swift; sourceTree = "<group>"; };
 		974F4DDA2BF1693F0033B74B /* dataExercices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataExercices.swift; sourceTree = "<group>"; };
 		974F4DDF2BF16A9A0033B74B /* MusclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesView.swift; sourceTree = "<group>"; };
 		974F4DE12BF16B070033B74B /* MuscleExercicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleExercicesView.swift; sourceTree = "<group>"; };
+		975D4A562D063AFA00C18965 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		977812172D07AE3200A797C6 /* ConnectivityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityDelegate.swift; sourceTree = "<group>"; };
 		97A81EFA2C03DAD30024A46A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		97A81EFC2C03E0B50024A46A /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		97C10D8E2BC997CC00023E7D /* FitnessWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +199,8 @@
 				971A0C8A2C1771E8009337C1 /* Series.swift */,
 				973410652C1B95BA00E10CC9 /* DataManager.swift */,
 				97475D582C457E9A0094FFE6 /* CurrentSession.swift */,
+				975D4A562D063AFA00C18965 /* Connectivity.swift */,
+				977812172D07AE3200A797C6 /* ConnectivityDelegate.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -215,13 +226,14 @@
 		97C10D902BC997CC00023E7D /* FitnessWatch */ = {
 			isa = PBXGroup;
 			children = (
-				970DB1022CCA3DC400AFAAEF /* FocusStateDemoView.swift */,
+				973B2C442CDE298C004EEF94 /* Info.plist */,
 				97C10D912BC997CC00023E7D /* FitnessWatchApp.swift */,
 				97C10D932BC997CC00023E7D /* ContentView.swift */,
 				97C10D952BC997CD00023E7D /* Assets.xcassets */,
 				97C10D972BC997CD00023E7D /* Preview Content */,
-				974C5CA92C331C81000D5E60 /* MusclesListView.swift */,
-				974C5CAB2C331CB4000D5E60 /* MuscleExercicesListView.swift */,
+				973038AF2CE1630A00313299 /* HistoricalView.swift */,
+				973038B12CE1632300313299 /* MusclesViews.swift */,
+				973038B32CE1633200313299 /* MuscleExerciseDetailView.swift */,
 			);
 			path = FitnessWatch;
 			sourceTree = "<group>";
@@ -358,11 +370,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977812192D07AE7500A797C6 /* ConnectivityDelegate.swift in Sources */,
+				97BA100A2CFE440000A34942 /* DataManager.swift in Sources */,
+				973038AE2CE161C600313299 /* Series.swift in Sources */,
 				97C10D942BC997CC00023E7D /* ContentView.swift in Sources */,
+				973038B42CE1633200313299 /* MuscleExerciseDetailView.swift in Sources */,
+				975D4A582D063AFA00C18965 /* Connectivity.swift in Sources */,
 				97C10D922BC997CC00023E7D /* FitnessWatchApp.swift in Sources */,
-				970DB1032CCA3DC400AFAAEF /* FocusStateDemoView.swift in Sources */,
-				974C5CAA2C331C81000D5E60 /* MusclesListView.swift in Sources */,
-				974C5CAC2C331CB4000D5E60 /* MuscleExercicesListView.swift in Sources */,
+				973038B02CE1630A00313299 /* HistoricalView.swift in Sources */,
+				973038B22CE1632300313299 /* MusclesViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +394,8 @@
 				971CF4892BFB859300BD79A6 /* TimerTwo.swift in Sources */,
 				971CF4932BFD412600BD79A6 /* AllTimers.swift in Sources */,
 				974F4DE22BF16B070033B74B /* MuscleExercicesView.swift in Sources */,
+				975D4A572D063AFA00C18965 /* Connectivity.swift in Sources */,
+				977812182D07AE3200A797C6 /* ConnectivityDelegate.swift in Sources */,
 				971A0C872C144974009337C1 /* CurrentInformationsView.swift in Sources */,
 				971CF48F2BFD1CD300BD79A6 /* AllTimersView.swift in Sources */,
 				973410662C1B95BA00E10CC9 /* DataManager.swift in Sources */,
@@ -541,8 +559,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = FitnessWatch;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.castlecoder.FitnessWatch;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,7 +575,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -571,8 +591,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = FitnessWatch;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.castlecoder.FitnessWatch;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,7 +608,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -601,14 +623,16 @@
 				DEVELOPMENT_TEAM = MN655R3RBY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitnessWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FitnessWatch;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -634,14 +658,16 @@
 				DEVELOPMENT_TEAM = MN655R3RBY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitnessWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FitnessWatch;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

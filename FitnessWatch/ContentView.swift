@@ -6,18 +6,22 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    
+    @ObservedObject var connectivity: Connectivity = Connectivity.shared
+
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Text("hello")
+        Text("\(connectivity.receivedMuscle ?? "no muscle")")
     }
 }
+
+
+
+
 
 #Preview {
     ContentView()

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct TabMainView: View {
-    @State private var selectedTab = 1
-    
+    @State var selectedTab: Int = 1
     var body: some View {
+        
         TabView(selection: $selectedTab) {
             SecondaryMainPage()
                 .tag(0)
@@ -26,5 +26,5 @@ struct TabMainView: View {
 }
 
 #Preview {
-    TabMainView()
+    TabMainView(selectedTab: 1)
 }

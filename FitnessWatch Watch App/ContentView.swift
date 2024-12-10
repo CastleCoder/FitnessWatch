@@ -12,13 +12,13 @@ struct ContentView: View {
     @StateObject private var dataManager = DataManager()
     
     @Environment(\.modelContext) private var context
-    @State private var ExerciceChoose: String = "À choisir"
-    @State private var groupName: String = "À choisir"
+//    @State private var ExerciceChoose: String = "À choisir"
+//    @State private var groupName: String = "À choisir"
     @Query private var items: [Series]
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             VStack {
                 NavigationLink(destination: CurrentInformationsView().environmentObject(dataManager)) {
                     Text("Current Informations")

@@ -8,14 +8,16 @@
 import SwiftUI
 import SwiftData
 
+
 struct CurrentInformationsView: View {
     
     
     
     @EnvironmentObject var dataManager: DataManager
     @Environment(\.modelContext) private var context
+    @ObservedObject var connectivity: Connectivity = Connectivity.shared
     
-    @AppStorage("savedGroupName") private var savedGroupName: String = ""
+    //    @AppStorage("savedGroupName") private var savedGroupName: String = ""
     @AppStorage("savedExerciceName") private var savedExerciceName: String = ""
     
     
@@ -34,7 +36,7 @@ struct CurrentInformationsView: View {
     
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             TabView(selection: $selectedTab) {
                 
                 SecondaryMainPage()
@@ -46,23 +48,22 @@ struct CurrentInformationsView: View {
                             Text("Muscle:")
                             Spacer()
                             NavigationLink(destination: MusclesView()) {
-                                Text(savedGroupName.isEmpty ? "À choisir" : savedGroupName)
+                                Text(groupName)
                             }
                             
                             .buttonStyle(PlainButtonStyle())
                         }
-                        .onAppear {
-                            savedGroupName = groupName
-                        }
+                        //                        .onAppear {
+                        //                            savedGroupName = groupName
+                        //                        }
                         HStack {
                             Text("Exercise:")
                             Spacer()
                             NavigationLink(destination: MuscleExercicesView(groupName: groupName, ExerciceChoose: ExerciceChoose)) {
-                                Text(savedExerciceName.isEmpty ? "À choisir" : savedExerciceName)
+                                Text(ExerciceChoose)
                             }
                             .onAppear {
                                 savedExerciceName = ExerciceChoose
-                                
                             }
                             .buttonStyle(PlainButtonStyle())
                         }
@@ -99,12 +100,27 @@ struct CurrentInformationsView: View {
                         Spacer()
                         
                         Button(action: {
-                            dataManager.addSeries(muscle: groupName, exercise: ExerciceChoose, weight: Float(WeightChoose), reps: Float(RepChoose), sets: set, context: context)
-                            set += 1
-                            print("\(savedGroupName) & \(savedExerciceName)")
                             
+
+
+                            
+                            dataManager.addSeries(
+                                muscle: groupName,
+                                exercise: ExerciceChoose,
+                                weight: Float(WeightChoose),
+                                reps: Float(RepChoose),
+                                sets: set,
+                                context: context
+                                
+                            )
+                            connectivity.sendNewMessage([Series.muscleKey: groupName])
+                            
+                           
+                            
+                            set += 1 // Incrémente 'set' après l'envoi
+                            print("\(groupName) & \(ExerciceChoose)")
                         }) {
-                            Text("Validé la série")
+                            Text("Valider la série")
                                 .padding()
                                 .background(Color.green)
                                 .foregroundColor(.white)
@@ -115,7 +131,7 @@ struct CurrentInformationsView: View {
                         
                         
                     }
-
+                    
                     .onChange(of: savedExerciceName) {
                         set = 0
                         RepChoose = 0

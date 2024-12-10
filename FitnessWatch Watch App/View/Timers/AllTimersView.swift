@@ -53,7 +53,7 @@ struct AllTimersView: View {
         
         NavigationStack {
             VStack {
-                Text("Compte à rebours sélectionné")
+                Text("Compte à rebours")
                     .font(.headline)
 //                    .padding(.bottom, 10)
                     .foregroundColor(.red)

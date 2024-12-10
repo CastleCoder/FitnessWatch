@@ -12,6 +12,8 @@ import SwiftData
 
 @Model
 class Series: Identifiable {
+    static let muscleKey = "muscle"
+
     var id: String
     var date: Date
     var muscle: String
@@ -30,6 +32,7 @@ class Series: Identifiable {
         self.sets = sets
     }
 }
+
 
 
 

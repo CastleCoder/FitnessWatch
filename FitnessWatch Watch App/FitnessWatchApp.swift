@@ -10,6 +10,8 @@ import SwiftData
 
 @main
 struct FitnessWatch_Watch_AppApp: App {
+    
+    
 
     var body: some Scene {
         WindowGroup {

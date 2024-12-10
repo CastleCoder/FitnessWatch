@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
+
+
 
 @main
-struct FitnessWatchApp: App {
+struct MyApp: App {
+    
+    
+    @StateObject private var dataManager = DataManager()
+
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dataManager)
         }
     }
 }

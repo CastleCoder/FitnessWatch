@@ -27,7 +27,7 @@ struct TimerThree: View {
                         timerManager.startTimer(initialTime: initialTime)
                     }
                 }) {
-                    Image(systemName: timerManager.timerActive ? "stop.circle.fill" : "restart.circle")
+                    Image(systemName: timerManager.timerActive ? "stop.circle.fill" : "play.circle.fill")
                         .resizable()
                         .frame(width: 40, height: 40)
                         .padding()
