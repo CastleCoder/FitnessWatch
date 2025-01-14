@@ -15,9 +15,7 @@ class DataManager: ObservableObject {
         let newSeries = Series(date: Date(), muscle: muscle, exercise: exercise, weight: weight, reps: reps, sets: sets)
         context.insert(newSeries)
         
-//        let message: [String: Any] = [
-//            "muscle": groupName
-//        ]
+
         
         
         

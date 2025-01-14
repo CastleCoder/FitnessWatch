@@ -13,6 +13,12 @@ import SwiftData
 @Model
 class Series: Identifiable {
     static let muscleKey = "muscle"
+    static let dateKey = "date"
+    static let exerciceKey = "exercice"
+    static let weightKey = "weight"
+    static let repKey = "rep"
+    static let setsKey = "set"
+
 
     var id: String
     var date: Date

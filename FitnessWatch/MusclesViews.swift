@@ -9,33 +9,29 @@ import SwiftUI
 import SwiftData
 
 struct MusclesViews: View {
-    var date: Date
-
+    @Environment(\.modelContext) private var modelContext
     @Query private var seriesList: [Series]
+    let selectedDate: Date
+
+    init(selectedDate: Date) {
+        self.selectedDate = selectedDate
+        // Filtrer les séries pour la date sélectionnée
+        _seriesList = Query(filter: #Predicate { $0.date == selectedDate })
+    }
 
     var body: some View {
         List {
-            let seriesOnDate = seriesList.filter { Calendar.current.isDate($0.date, inSameDayAs: date) }
-            let groupedByMuscle = Dictionary(grouping: seriesOnDate) { $0.muscle }
-            
-            ForEach(Array(groupedByMuscle.keys.sorted()), id: \.self) { muscle in
-                NavigationLink(destination: MuscleExerciseDetailView(muscle: muscle, date: date)) {
+            ForEach(Array(Set(seriesList.map { $0.muscle })), id: \.self) { muscle in
+                NavigationLink(destination: MuscleExerciseDetailView(selectedMuscle: muscle, selectedDate: selectedDate)) {
                     Text(muscle)
+                        .font(.headline)
                 }
             }
         }
-        .navigationTitle("\(date, formatter: dateFormatter)")
-    }
-    
-
-
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        return formatter
+        .navigationTitle("Muscles")
     }
 }
 
 #Preview {
-    MusclesViews(date: Date())
+    MusclesViews(selectedDate: Date())
 }

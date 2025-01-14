@@ -113,7 +113,13 @@ struct CurrentInformationsView: View {
                                 context: context
                                 
                             )
-                            connectivity.sendNewMessage([Series.muscleKey: groupName])
+                            connectivity.sendNewMessage([Series.muscleKey: groupName,
+                                                         Series.exerciceKey: ExerciceChoose,
+                                                         Series.weightKey: WeightChoose,
+                                                         Series.repKey: RepChoose,
+                                                         Series.setsKey: set+1,
+                                                         Series.dateKey: Date()
+                                                        ])
                             
                            
                             

@@ -7,13 +7,21 @@
 
 import Foundation
 import WatchConnectivity
+import SwiftData
 
 class Connectivity: NSObject, ObservableObject {
     
     static let shared = Connectivity()
+    var modelContext: ModelContext?
     let messageKey = "Hello"
     @Published var message: Series? = nil
     @Published var receivedMuscle: String? = nil
+    @Published var receivedExercice: String?
+    @Published var receivedWeight: Int?
+    @Published var receivedRep: Int?
+    @Published var receivedSet: Int?
+    @Published var receivedDate: Date?
+
     
     override init() {
         super.init()

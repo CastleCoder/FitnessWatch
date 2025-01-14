@@ -9,29 +9,32 @@ import SwiftUI
 import SwiftData
 
 struct HistoricalView: View {
-    @Query var seriesList: [Series] // Récupérer les données de SwiftData
+    @Query(sort: \Series.date, order: .reverse) private var seriesList: [Series]
 
-        var body: some View {
-            NavigationView {
-                List(seriesList) { series in
-                    VStack(alignment: .leading) {
-                        Text("Page des series")
-                        Text(series.exercise)
-                            .font(.headline)
-                        Text("Muscle : \(series.muscle)")
-                        Text("Poids : \(series.weight, specifier: "%.2f") kg")
-                        Text("Répétitions : \(Int(series.reps))")
-                        Text("Sets : \(series.sets)")
-                        Text("Date : \(series.date.formatted(date: .abbreviated, time: .shortened))")
-                            .font(.footnote)
-                            .foregroundColor(.gray)
-                    }
-                    .padding(.vertical, 5)
+    var body: some View {
+        List {
+            let groupedByDate = Dictionary(grouping: seriesList) { series in
+                Calendar.current.startOfDay(for: series.date)
+            }
+            
+            let sortedDates = groupedByDate.keys.sorted(by: >)
+            ForEach(sortedDates, id: \.self) { date in
+                NavigationLink(destination: MusclesViews(selectedDate: date)) {
+                    Text("\(date, formatter: dateFormatter)")
                 }
-                .navigationTitle("Séries Validées")
             }
         }
+        .navigationTitle("Historique")
+    }
+    
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }
 }
+
+
 
 #Preview {
     HistoricalView()

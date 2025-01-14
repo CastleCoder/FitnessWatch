@@ -20,7 +20,7 @@ struct MyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(dataManager)
         }
+        .modelContainer(for: Series.self)
     }
 }
