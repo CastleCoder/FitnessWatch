@@ -18,7 +18,7 @@ struct TabMainView: View {
             CurrentInformationsView()
                 .tag(1)
             
-            AllTimers()
+            Chronometer()
                 .tag(2)
         }
         .navigationBarHidden(true)

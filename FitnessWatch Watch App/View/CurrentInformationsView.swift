@@ -150,7 +150,7 @@ struct CurrentInformationsView: View {
                 }
                 .tag(1)
                 
-                AllTimers()
+                Chronometer()
                     .tag(2)
             }
         }
