@@ -19,7 +19,7 @@ struct HistoricalView: View {
             
             let sortedDates = groupedByDate.keys.sorted(by: >)
             ForEach(sortedDates, id: \.self) { date in
-                NavigationLink(destination: MusclesViews(selectedDate: date)) {
+                NavigationLink(destination: MusclesViews(date: date)) {
                     Text("\(date, formatter: dateFormatter)")
                 }
             }
@@ -34,8 +34,7 @@ struct HistoricalView: View {
     }
 }
 
-
-
 #Preview {
     HistoricalView()
+//        .modelContainer(for: Series.self, inMemory: true)
 }

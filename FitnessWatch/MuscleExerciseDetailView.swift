@@ -9,37 +9,39 @@ import SwiftUI
 import SwiftData
 
 struct MuscleExerciseDetailView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var seriesList: [Series]
-    let selectedMuscle: String
-    let selectedDate: Date
-
-    init(selectedMuscle: String, selectedDate: Date) {
-        self.selectedMuscle = selectedMuscle
-        self.selectedDate = selectedDate
-        // Filtrer les séries pour le muscle et la date sélectionnés
-        _seriesList = Query(filter: #Predicate { $0.muscle == selectedMuscle && $0.date == selectedDate })
-    }
+    var muscle: String
+    var date: Date
+    
+    @Query private var itemSerie: [Series]
 
     var body: some View {
         List {
-            ForEach(seriesList) { series in
+            let filteredSeries = itemSerie.filter {
+                Calendar.current.isDate($0.date, inSameDayAs: date) && $0.muscle == muscle
+            }
+            let groupedByExercise = Dictionary(grouping: filteredSeries) { $0.exercise }
+            
+            ForEach(groupedByExercise.keys.sorted(), id: \.self) { exercise in
                 VStack(alignment: .leading) {
-                    Text(series.exercise)
+                    Text(exercise)
                         .font(.headline)
-                    HStack {
-                        Text("Weight: \(series.weight, specifier: "%.1f") kg")
-                        Text("Reps: \(Int(series.reps))")
-                        Text("Sets: \(series.sets)")
+                    
+                    if let seriesForExercise = groupedByExercise[exercise] {
+                        let sortedSeries = seriesForExercise.sorted { $0.date < $1.date }
+                        
+                        ForEach(Array(sortedSeries.enumerated()), id: \.element.id) { index, serie in
+                            Text("\(String(format: "%.0f", serie.weight)) kg, \(String(format: "%.0f", serie.reps)) reps, Set n°\((index + 1)) ")
+                                .font(.subheadline)
+                                .fontWeight(.thin)
+                        }
                     }
-                    .font(.subheadline)
                 }
             }
         }
-        .navigationTitle("\(selectedMuscle) Details")
+        .navigationTitle(muscle)
     }
 }
 
 #Preview {
-    MuscleExerciseDetailView(selectedMuscle: "Pectoraux", selectedDate: Date())
+    MuscleExerciseDetailView(muscle: "Pectoraux", date: Date())
 }

@@ -17,7 +17,7 @@ struct CurrentInformationsView: View {
     @Environment(\.modelContext) private var context
     @ObservedObject var connectivity: Connectivity = Connectivity.shared
     
-    //    @AppStorage("savedGroupName") private var savedGroupName: String = ""
+    
     @AppStorage("savedExerciceName") private var savedExerciceName: String = ""
     
     
@@ -30,7 +30,10 @@ struct CurrentInformationsView: View {
     @SceneStorage("set") var set: Int = 0
     
     @State private var selectedTab = 1
+    @State private var isButtonDisabled = false
     
+    @Query var allSeries: [Series]  // toutes les séries enregistrées
+
     
     
     
@@ -53,9 +56,7 @@ struct CurrentInformationsView: View {
                             
                             .buttonStyle(PlainButtonStyle())
                         }
-                        //                        .onAppear {
-                        //                            savedGroupName = groupName
-                        //                        }
+                        
                         HStack {
                             Text("Exercise:")
                             Spacer()
@@ -67,6 +68,7 @@ struct CurrentInformationsView: View {
                             }
                             .buttonStyle(PlainButtonStyle())
                         }
+                        .disabled(groupName == "À choisir")
                         
                         HStack {
                             Text("Poids:")
@@ -89,10 +91,11 @@ struct CurrentInformationsView: View {
                         HStack {
                             Text("N° de Série:")
                             Spacer()
-                            if set <= 1 {
-                                Text("\(set) série")
+                            let currentSet = seriesCountToday()
+                            if currentSet <= 1 {
+                                Text("\(currentSet) série")
                             } else {
-                                Text("\(set) séries")
+                                Text("\(currentSet) séries")
                             }
                         }
                         
@@ -101,39 +104,63 @@ struct CurrentInformationsView: View {
                         
                         Button(action: {
                             
+                            isButtonDisabled = true
+
+                                // Crée la série
+                                let newSeries = Series(
+                                    date: Date(),
+                                    muscle: groupName,
+                                    exercise: ExerciceChoose,
+                                    weight: Float(WeightChoose),
+                                    reps: Float(RepChoose),
+                                    sets: set + 1
+
+                                )
 
 
+                                // 1. Sauvegarde sur la montre
+                                context.insert(newSeries)
                             
-                            dataManager.addSeries(
-                                muscle: groupName,
-                                exercise: ExerciceChoose,
-                                weight: Float(WeightChoose),
-                                reps: Float(RepChoose),
-                                sets: set,
-                                context: context
-                                
-                            )
-                            connectivity.sendNewMessage([Series.muscleKey: groupName,
-                                                         Series.exerciceKey: ExerciceChoose,
-                                                         Series.weightKey: WeightChoose,
-                                                         Series.repKey: RepChoose,
-                                                         Series.setsKey: set+1,
-                                                         Series.dateKey: Date()
-                                                        ])
-                            
-                           
-                            
-                            set += 1 // Incrémente 'set' après l'envoi
-                            print("\(groupName) & \(ExerciceChoose)")
-                        }) {
-                            Text("Valider la série")
-                                .padding()
-                                .background(Color.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        .disabled(groupName == "À choisir" || ExerciceChoose == "À choisir")
-                        .buttonStyle(PlainButtonStyle())
+                            print("📤 Envoi depuis Watch :")
+                                print("- muscle: \(groupName)")
+                                print("- exercice: \(ExerciceChoose)")
+                                print("- poids: \(WeightChoose)")
+                                print("- reps: \(RepChoose)")
+                                print("- sets: \(set + 1)")
+
+
+                                // 2. Envoie sur l’iPhone via WatchConnectivity
+//                                let dto = SeriesDTO(from: newSeries)
+//                                if let data = try? JSONEncoder().encode(dto) {
+                            let message: [String: Any] = [
+                                    Series.muscleKey: groupName,
+                                    Series.exerciceKey: ExerciceChoose,
+                                    Series.weightKey: Int(WeightChoose),
+                                    Series.repKey: Int(RepChoose),
+                                    Series.setsKey: set + 1,
+                                    Series.dateKey: Date()
+                                ]
+                                connectivity.sendNewMessage(message)
+//                                }
+
+                                // 3. Incrémentation série
+                                set += 1
+
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    isButtonDisabled = false
+                                }
+
+                            }) {
+                                Text("Valider la série")
+                                    .padding()
+                                    .background(Color.green)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                            .disabled(isButtonDisabled || groupName == "À choisir" || ExerciceChoose == "À choisir")
+                            .buttonStyle(PlainButtonStyle())
+                        
+                        
                         
                         
                     }
@@ -154,9 +181,24 @@ struct CurrentInformationsView: View {
                     .tag(2)
             }
         }
+
         .navigationBarBackButtonHidden(true)
     }
+    
+    func seriesCountToday() -> Int {
+        let today = Calendar.current.startOfDay(for: Date())
+        return allSeries.filter {
+            $0.muscle == groupName &&
+            $0.exercise == ExerciceChoose &&
+            Calendar.current.isDate($0.date, inSameDayAs: today)
+        }.count
+    }
+    
 }
+
+
+
+
 
 #Preview {
     CurrentInformationsView()
