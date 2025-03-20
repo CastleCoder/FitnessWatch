@@ -23,6 +23,8 @@
 		971CF48F2BFD1CD300BD79A6 /* AllTimersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF48E2BFD1CD300BD79A6 /* AllTimersView.swift */; };
 		971CF4912BFD3F7800BD79A6 /* Chronometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4902BFD3F7800BD79A6 /* Chronometer.swift */; };
 		971CF4932BFD412600BD79A6 /* AllTimers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CF4922BFD412600BD79A6 /* AllTimers.swift */; };
+		9723BC682E04B10F0054E1A0 /* dataExercices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F4DDA2BF1693F0033B74B /* dataExercices.swift */; };
+		9723BC692E04B13B0054E1A0 /* CurrentSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97475D582C457E9A0094FFE6 /* CurrentSession.swift */; };
 		973038AE2CE161C600313299 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A0C8A2C1771E8009337C1 /* Series.swift */; };
 		973038B02CE1630A00313299 /* HistoricalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973038AF2CE1630A00313299 /* HistoricalView.swift */; };
 		973038B22CE1632300313299 /* MusclesViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973038B12CE1632300313299 /* MusclesViews.swift */; };
@@ -157,6 +159,19 @@
 			path = Timers;
 			sourceTree = "<group>";
 		};
+		9723BC672E04ACA80054E1A0 /* SharedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				971A0C8A2C1771E8009337C1 /* Series.swift */,
+				973410652C1B95BA00E10CC9 /* DataManager.swift */,
+				975D4A562D063AFA00C18965 /* Connectivity.swift */,
+				977812172D07AE3200A797C6 /* ConnectivityDelegate.swift */,
+				974F4DDA2BF1693F0033B74B /* dataExercices.swift */,
+				97475D582C457E9A0094FFE6 /* CurrentSession.swift */,
+			);
+			path = SharedFiles;
+			sourceTree = "<group>";
+		};
 		9733C3982C65250800FB6693 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,14 +208,8 @@
 		974F4DDC2BF169600033B74B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				974F4DDA2BF1693F0033B74B /* dataExercices.swift */,
 				97A81EFC2C03E0B50024A46A /* TimerManager.swift */,
 				971A0C842C1228F6009337C1 /* CountDownTimerManager.swift */,
-				971A0C8A2C1771E8009337C1 /* Series.swift */,
-				973410652C1B95BA00E10CC9 /* DataManager.swift */,
-				97475D582C457E9A0094FFE6 /* CurrentSession.swift */,
-				975D4A562D063AFA00C18965 /* Connectivity.swift */,
-				977812172D07AE3200A797C6 /* ConnectivityDelegate.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -249,6 +258,7 @@
 		97C10DA22BC997CD00023E7D /* FitnessWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				9723BC672E04ACA80054E1A0 /* SharedFiles */,
 				97C10DA92BC997CE00023E7D /* Preview Content */,
 				97C10DA52BC997CD00023E7D /* ContentView.swift */,
 				97C10DA32BC997CD00023E7D /* FitnessWatchApp.swift */,
@@ -371,6 +381,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				977812192D07AE7500A797C6 /* ConnectivityDelegate.swift in Sources */,
+				9723BC682E04B10F0054E1A0 /* dataExercices.swift in Sources */,
+				9723BC692E04B13B0054E1A0 /* CurrentSession.swift in Sources */,
 				97BA100A2CFE440000A34942 /* DataManager.swift in Sources */,
 				973038AE2CE161C600313299 /* Series.swift in Sources */,
 				97C10D942BC997CC00023E7D /* ContentView.swift in Sources */,

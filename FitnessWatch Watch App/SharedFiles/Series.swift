@@ -39,6 +39,33 @@ class Series: Identifiable {
     }
 }
 
+// Struct miroir pour transférer Series en JSON
+struct SeriesDTO: Codable, Identifiable {
+    var id: String
+    var date: Date
+    var muscle: String
+    var exercise: String
+    var weight: Float
+    var reps: Float
+    var sets: Int
+
+    // Convertit un Series SwiftData vers SeriesDTO
+    init(from series: Series) {
+        self.id = series.id
+        self.date = series.date
+        self.muscle = series.muscle
+        self.exercise = series.exercise
+        self.weight = series.weight
+        self.reps = series.reps
+        self.sets = series.sets
+    }
+
+    // Reconvertit vers un objet Series classique
+    func toSeries() -> Series {
+        return Series(date: date, muscle: muscle, exercise: exercise, weight: weight, reps: reps, sets: sets)
+    }
+}
+
 
 
 

@@ -36,6 +36,10 @@ class Connectivity: NSObject, ObservableObject {
         }
     }
     
+    func sendSeriesData(_ data: [String: Any]) {
+        WCSession.default.transferUserInfo(data)
+    }
+    
     func sendNewMessage(_ message: [String: Any]) {
         guard WCSession.default.activationState == .activated else { return }
         #if os(iOS)
@@ -50,4 +54,6 @@ class Connectivity: NSObject, ObservableObject {
     func errorSendingMessage(_ error: Error) {
         print("Nous n'avons pas pu envoyer ce message car: \n\(error.localizedDescription)")
     }
+    
+   
 }

@@ -9,29 +9,32 @@ import SwiftUI
 import SwiftData
 
 struct MusclesViews: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var seriesList: [Series]
-    let selectedDate: Date
+    var date: Date  // ✅ Ajout du paramètre date
 
-    init(selectedDate: Date) {
-        self.selectedDate = selectedDate
-        // Filtrer les séries pour la date sélectionnée
-        _seriesList = Query(filter: #Predicate { $0.date == selectedDate })
-    }
+    @Query private var seriesList: [Series]
 
     var body: some View {
         List {
-            ForEach(Array(Set(seriesList.map { $0.muscle })), id: \.self) { muscle in
-                NavigationLink(destination: MuscleExerciseDetailView(selectedMuscle: muscle, selectedDate: selectedDate)) {
+            let seriesOnDate = seriesList.filter { Calendar.current.isDate($0.date, inSameDayAs: date) }
+            let groupedByMuscle = Dictionary(grouping: seriesOnDate) { $0.muscle }
+            
+            ForEach(Array(groupedByMuscle.keys.sorted()), id: \.self) { muscle in
+                NavigationLink(destination: MuscleExerciseDetailView(muscle: muscle, date: date)) {
                     Text(muscle)
-                        .font(.headline)
                 }
             }
         }
-        .navigationTitle("Muscles")
+        .navigationTitle("\(date, formatter: dateFormatter)")
+    }
+    
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
     }
 }
 
 #Preview {
-    MusclesViews(selectedDate: Date())
+    MusclesViews(date: Date()) // ✅ Passe une date pour éviter l'erreur
+//        .modelContainer(for: Series.self, inMemory: true)
 }

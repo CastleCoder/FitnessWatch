@@ -31,9 +31,7 @@ struct SecondaryMainPage: View {
                     )
                     .buttonStyle(PlainButtonStyle())
                     .padding(10)
-//                    HStack {
-//                        Spacer()
-                        
+//                        Spacer
                         
 //                        Spacer()
                     NavigationLink(destination: TabMainView(selectedTab: 2 )) {
