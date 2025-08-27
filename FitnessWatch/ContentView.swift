@@ -80,7 +80,6 @@ struct ContentView: View {
     
     
     
-    
     private func addItem() {
         guard !isAddingItem else { return } // Empêche les ajouts multiples rapides
         guard muscleIos != "no muscle" else { return }
